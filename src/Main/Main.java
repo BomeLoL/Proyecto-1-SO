@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) {
         //esto son datos temporales de prueba, despues lo borramos
         
-        Warehouse warehouseApple = new Warehouse(5, "Apple");
+        Warehouse warehouseApple = new Warehouse(5, "Apple",5,5);
         Company apple = new Company("Apple",warehouseApple,1000);
         apple.AddWorker(1, 5);
         apple.AddWorker(0, 5);

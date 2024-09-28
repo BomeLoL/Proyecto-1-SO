@@ -21,12 +21,16 @@ public class Warehouse {
     private double income = 0;
     private double costs = 0;
     private double utility = 0;
+    private int deadline;
+    private int deadlineCounter; 
 
-    public Warehouse(int pcUntilSpecial, String company) {
+    public Warehouse(int pcUntilSpecial, String company, int deadline, int deadlineCounter) {
         this.pcUntilSpecial = pcUntilSpecial;
         this.company = company;
+        this.deadline = deadline;
+        this.deadlineCounter = deadlineCounter;
     }
-    
+
     public void AddComponent(int type){
         if (type == 0){
             if(this.motherboard<25){
@@ -191,7 +195,22 @@ public class Warehouse {
     public void setUtility(double utility) {
         this.utility = utility;
     }
-    
+
+    public int getDeadline() {
+        return deadline;
+    }
+
+    public void setDeadline(int deadline) {
+        this.deadline = deadline;
+    }
+
+    public int getDeadlineCounter() {
+        return deadlineCounter;
+    }
+
+    public void setDeadlineCounter(int deadlineCounter) {
+        this.deadlineCounter = deadlineCounter;
+    }
 
 }
 
