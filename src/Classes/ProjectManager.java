@@ -6,8 +6,13 @@ package Classes;
 
 /**
  *
- * @author kevin
+ * @author andreaV 
  */
 public class ProjectManager {
+    
+    private int paymentph;
+    
+    
+            
     
 }
