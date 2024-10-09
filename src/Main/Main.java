@@ -17,9 +17,15 @@ public class Main {
     /**
      * @param args the command line arguments
      */
+    
+ 
+    
     public static void main(String[] args) {
         //esto son datos temporales de prueba, despues lo borramos
         
+        Interface inter = new Interface();
+        inter.setVisible(true);
+      
         Warehouse warehouseApple = new Warehouse(5, "Apple",5,5);
         Company apple = new Company("Apple",warehouseApple,1000);
         apple.AddWorker(1, 5);
