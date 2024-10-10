@@ -28,11 +28,11 @@ public class Company {
         this.name = name;
         this.warehouse = new Warehouse(pcUntilSpecial,name);
         this.listMotherboard = new List();
-        this.listCPU = new List();;
-        this.listRAM = new List();;
-        this.listPowerSupply = new List();;
-        this.listGraphic = new List();;
-        this.listAssembler = new List();;
+        this.listCPU = new List();
+        this.listRAM = new List();
+        this.listPowerSupply = new List();
+        this.listGraphic = new List();
+        this.listAssembler = new List();
     }
     
     public void AddWorker(int type, int quantity){
