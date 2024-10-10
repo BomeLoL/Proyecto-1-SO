@@ -38,8 +38,8 @@ public class Main {
         //apple.AddWorker(5, 5);
         
 
-        //Interface ui = new Interface();
-        //ui.setVisible(true);
+        Interface ui = new Interface();
+        ui.setVisible(true);
     }
     
 }
