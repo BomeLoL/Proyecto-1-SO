@@ -5,7 +5,9 @@
 package Main;
 
 import Classes.Company;
+import Classes.ProjectManager;
 import Classes.Warehouse;
+import Interfaces.Global;
 import Interfaces.Interface;
 
 /**
@@ -23,17 +25,18 @@ public class Main {
     public static void main(String[] args) {
         //esto son datos temporales de prueba, despues lo borramos
         
-        Interface inter = new Interface();
-        inter.setVisible(true);
+        //Interface inter = new Interface();
+        //inter.setVisible(true);
       
-        Warehouse warehouseApple = new Warehouse(5, "Apple",5,5);
-        Company apple = new Company("Apple",warehouseApple,1000);
-        apple.AddWorker(1, 5);
-        apple.AddWorker(0, 5);
-        apple.AddWorker(2, 5);
-        apple.AddWorker(3, 2);
-        apple.AddWorker(4, 1);
-        apple.AddWorker(5, 5);
+        //Warehouse warehouseApple = new Warehouse(5, "Apple",5,5);
+        //Company apple = new Company("Apple",warehouseApple,1000);
+        //apple.AddWorker(1, 5);
+        //apple.AddWorker(0, 5);
+        //apple.AddWorker(2, 5);
+        //apple.AddWorker(3, 2);
+        //apple.AddWorker(4, 1);
+        //apple.AddWorker(5, 5);
+        
 
         //Interface ui = new Interface();
         //ui.setVisible(true);
