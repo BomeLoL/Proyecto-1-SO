@@ -207,7 +207,7 @@ public class Interface extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(Cont_Day_Duration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(511, Short.MAX_VALUE))
+                        .addContainerGap(527, Short.MAX_VALUE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addComponent(jLabel35)
@@ -443,20 +443,6 @@ public class Interface extends javax.swing.JFrame {
                             .addComponent(Warehouse_Ensambla_Apple))))
                 .addContainerGap(83, Short.MAX_VALUE))
         );
-
-        Cont_Guionista_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        Cont_Guionista_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_CN, ""));
-
-        Cont_Guionista_CN.setValue(1);
-
-        Cont_Guionista_CN.addChangeListener(new javax.swing.event.ChangeListener() {
-            public void stateChanged(javax.swing.event.ChangeEvent evt) {
-                Cont_Guionista_CNStateChanged(evt);
-            }
-        });
-
-        Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 80, 20));
 
         jTabbedPane1.addTab("Apple", jPanel3);
 

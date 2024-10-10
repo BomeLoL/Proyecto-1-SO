@@ -97,7 +97,7 @@
                               <Group type="102" attributes="0">
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="Cont_Day_Duration" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="511" max="32767" attributes="0"/>
+                                  <EmptySpace pref="527" max="32767" attributes="0"/>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
@@ -382,9 +382,6 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JSpinner" name="Const_ProduPlaca_Apple">
-                  <AuxValues>
-                    <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="Cont_Guionista_CN.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));&#xa;&#xa;Cont_Guionista_CN.setEditor(new javax.swing.JSpinner.NumberEditor(Cont_Guionista_CN, &quot;&quot;));&#xa;&#xa;Cont_Guionista_CN.setValue(1);&#xa;&#xa;Cont_Guionista_CN.addChangeListener(new javax.swing.event.ChangeListener() {&#xa;    public void stateChanged(javax.swing.event.ChangeEvent evt) {&#xa;        Cont_Guionista_CNStateChanged(evt);&#xa;    }&#xa;});&#xa;&#xa;Cartoon.add(Cont_Guionista_CN, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 250, 80, 20));"/>
-                  </AuxValues>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduCPU_Apple">
                 </Component>
