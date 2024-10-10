@@ -744,13 +744,13 @@ public class Interface extends javax.swing.JFrame {
                     }
                     cartoonpm.start();
                     cartoonDir.start();
-                    System.out.println("Listo cartoon");
+                    System.out.println("Listo apple");
                     this.Const_ProduPlaca_Apple.setValue(cn.getListaDoblaje().getSize());
                     this.Const_ProduCPU_Apple.setValue(cn.getListaAnimacion().getSize());
-                    this.Const_ProduCPU_Apple.setValue(cn.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
-                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                    this.Const_ProduMemoRAM_Apple.setValue(cn.getListaEnsamblador().getSize());
+                    this.Const_ProduFuenteAlime_Apple.setValue(cn.getListaEscenario().getSize());
+                    this.Const_ProduTarjegGraf_Apple.setValue(cn.getListaGuion().getSize());
+                    this.Const_Ensambladores_Apple.setValue(cn.getListaPlotTwist().getSize());
                  
                  }
                  else if (infoestu1[0].compareTo("Nick")==0) {
@@ -774,12 +774,12 @@ public class Interface extends javax.swing.JFrame {
                     }
                     nickpm.start();
                     nickDir.start(); 
-                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
-                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
-                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    this.Const_ProduPlaca_MSI.setValue(nick.getListaDoblaje().getSize());
+                    this.Const_ProduCPU_MSI.setValue(nick.getListaAnimacion().getSize());
+                    this.Const_ProduMemoRAM_MSI.setValue(nick.getListaEnsamblador().getSize());
+                    this.Const_ProduFuenteAlime_MSI.setValue(nick.getListaEscenario().getSize());
+                    this.Const_ProduTarjegGraf_MSI.setValue(nick.getListaGuion().getSize());
+                    this.Const_Ensambladores_MSI.setValue(nick.getListaPlotTwist().getSize());
                     
                  }
                  
@@ -806,12 +806,12 @@ public class Interface extends javax.swing.JFrame {
                      }
                     cartoonpm.start();
                     cartoonDir.start(); 
-                    this.Cont_Actor_Doblaje_CN.setValue(cn.getListaDoblaje().getSize());
-                    this.Cont_Animador_CN.setValue(cn.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_CN.setValue(cn.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
-                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                    this.Const_ProduPlaca_Apple.setValue(cn.getListaDoblaje().getSize());
+                    this.Const_ProduCPU_Apple.setValue(cn.getListaAnimacion().getSize());
+                    this.Const_ProduMemoRAM_Apple.setValue(cn.getListaEnsamblador().getSize());
+                    this.Const_ProduFuenteAlime_Apple.setValue(cn.getListaEscenario().getSize());
+                    this.Const_ProduTarjegGraf_Apple.setValue(cn.getListaGuion().getSize());
+                    this.Const_Ensambladores_Apple.setValue(cn.getListaPlotTwist().getSize());
                  }
                  else if (infoestu2[0].compareTo("Nick")==0) {
                      String [] divTra=infoestu2[1].split(":");
@@ -836,14 +836,14 @@ public class Interface extends javax.swing.JFrame {
                     }
                     nickpm.start();
                     nickDir.start(); 
-                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
-                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
-                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    this.Const_ProduPlaca_MSI.setValue(nick.getListaDoblaje().getSize());
+                    this.Const_ProduCPU_MSI.setValue(nick.getListaAnimacion().getSize());
+                    this.Const_ProduMemoRAM_MSI.setValue(nick.getListaEnsamblador().getSize());
+                    this.Const_ProduFuenteAlime_MSI.setValue(nick.getListaEscenario().getSize());
+                    this.Const_ProduTarjegGraf_MSI.setValue(nick.getListaGuion().getSize());
+                    this.Const_Ensambladores_MSI.setValue(nick.getListaPlotTwist().getSize());
                       
-                      System.out.println("Listo nick");
+                      System.out.println("Listo MSI");
                  
                  
                  }
