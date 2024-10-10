@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import static java.lang.Thread.sleep;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
@@ -17,63 +18,108 @@ public class Supervisor extends Thread {
     private int dayDuration;
     private float salaryTotal=0;
     private Warehouse warehouse;
-    private String currentActivity;
-    private int randomTime;
+    private String currentActivity = "Trabajando";
+    private int randomTime = 0;
+    private double hours;
     private ProjectManager pm;
 
-    public Supervisor(int salaryPerHour, Semaphore mutex, int dayDuration, Warehouse warehouse, String currentActivity, int randomTime, ProjectManager pm, int randomHourdDay) {
+    public Supervisor(int salaryPerHour, Semaphore mutex, int dayDuration, Warehouse warehouse, ProjectManager pm) {
         this.salaryPerHour = salaryPerHour;
         this.mutex = mutex;
         this.dayDuration = dayDuration;
         this.warehouse = warehouse;
-        this.currentActivity = currentActivity;
-        this.randomTime = randomTime;
+        this.hours = this.dayDuration/24;
         this.pm = pm;
     }
+
    
     @Override
     
     public void run(){
         while(true){
-            if(this.warehouse.getDeadlineCounter()> 0){
+        
+            if (this.warehouse.getDeadlineCounter() <=0){
                 try{
-                    Random random = new Random();
-                    int randomNumber = (int) (random.nextDouble()*dayDuration);
-                    setRandomTime(randomNumber);
-                    sleep(this.randomTime);
-                    if (checkPM() == true){
-                        this.mutex.acquire();
-                        this.mutex.release();
-                    }else{
-                        int timeLeft = dayDuration - getRandomTime();
-                        if (timeLeft!=0){
-                            sleep(timeLeft);
-                        }
-                    }
-                    this.mutex.acquire();
-                    this.warehouse.setDeadlineCounter(this.warehouse.getDeadlineCounter()-1);
-                    this.mutex.release();
-                }
-                catch(InterruptedException ex){
-                    
-                }
-            
-            }else if (this.warehouse.getDeadlineCounter() == 0){
-                try{
+                    this.currentActivity = "Enviando Computadoras";
+                    sleep(this.dayDuration);
                     this.mutex.acquire();
                     this.warehouse.setDeadlineCounter(this.warehouse.getDeadline());
-                    sleep(this.dayDuration);
+                    if(this.warehouse.getPcRegular() <= 0 && this.warehouse.getPcSpecial() <=0){
+                        System.out.println("No se entrego ninguna computadora");
+                    } else{
+                        if(this.warehouse.getPcRegular()>0){
+                            this.warehouse.calculateProfitRegular(this.warehouse.getPcRegular());
+                            this.warehouse.setPcRegular(0);
+                        }
+                        if(this.warehouse.getPcSpecial()>0){
+                            this.warehouse.calculateProfitSpecial(this.warehouse.getPcSpecial());
+                            this.warehouse.setPcSpecial(0);
+                        }
+                    }
                     this.mutex.release();
+                } catch(InterruptedException ex){
+                    System.out.println("error en director");
                 }
-                catch(InterruptedException ex){
-                    
+            } else if(this.warehouse.getDeadlineCounter()>0){
+                Random random = new Random();
+                while((this.randomTime = random.nextInt(24)) == 0){
+                    this.randomTime = random.nextInt(24);
+                }
+                
+                for (int i=1; i <=24; i++){
+                    try{
+                        this.currentActivity = "Trabajando";
+                        if(i==this.randomTime){
+                            this.currentActivity="Revisando al PM";
+                            if(this.randomTime <= 16){
+                                System.out.println("LO ATRAPE SI O SI");
+                            }
+                            mutex.acquire();
+                            boolean keepGoing = checkPM();
+                            if(!keepGoing){
+                                sleep((long) (this.hours/(60/17)));
+                            keepGoing = checkPM();
+                            }
+                            if(!keepGoing){
+                                sleep((long)(this.hours/60/17));
+                            keepGoing = checkPM();
+                            }
+                            mutex.release();
+                        }
+                        sleep((long) (this.hours/(60/35))); //Se llevan los 35 minutos que se requieren
+                    }catch(InterruptedException ex){
+                        System.out.println("error de director en el run");
+                    }
                 }
             }
+            getSalarySupervisor();
         }
+
     }
     
+    public void getSalarySupervisor() {
+        try{
+            this.mutex.acquire();
+            this.warehouse.setCosts(this.warehouse.getCosts()+this.salaryPerHour*24); //al costo le sumo lo que gano el empleado ese dia            
+            this.mutex.release();
+            this.salaryTotal+=this.salaryPerHour*24;
+            
+        }catch(InterruptedException ex) {
+                System.out.println("Error!!! del Director en obtenerSalario ");
+        }
+            
+    }
+    
+    
     public boolean checkPM(){
-        return true;
+        if(this.getPm().getStatus().equals("Viendo anime")){
+                this.getPm().setFaults(this.getPm().getFaults() + 1);
+                this.getPm().setMoneyDeducted(this.getPm().getMoneyDeducted()+ 100);
+                this.getPm().setSalaryTotal(this.getPm().getSalaryTotal()- 100);
+                return true;
+        } else{
+            return false;
+        }        
     }
     
     public int getSalaryPerHour() {

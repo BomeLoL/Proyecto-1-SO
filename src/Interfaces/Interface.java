@@ -8,7 +8,7 @@ import java.awt.BasicStroke;
 import java.awt.Color;
 import Classes.Company;
 import Classes.ProjectManager;
-import Classes.Director;
+import Classes.Supervisor;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;

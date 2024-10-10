@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
 
 
@@ -107,9 +108,10 @@ public class Worker extends Thread {
         try{
             this.mutex.acquire(); // se expropia para añadir el costo en el almacen
             this.warehouse.setCosts(this.warehouse.getCosts()+this.salaryPerHour*24);
-            this.mutex.release();    
+            this.mutex.release();
+            this.salaryTotal+=this.salaryPerHour*24;
         }catch(InterruptedException ex) {
-        
+            System.out.println("erorr en worker salary");
         }
     }
     
@@ -118,6 +120,7 @@ public class Worker extends Thread {
         
         while(this.keepGoing){
             try{
+                getSalary();
                 Work();
                 sleep(this.dayDuration);
             }

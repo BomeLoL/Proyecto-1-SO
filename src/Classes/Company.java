@@ -6,6 +6,7 @@ package Classes;
 
 import Classes.Worker;
 import DataEstructure.List;
+import DataEstructure.Node;
 import Interfaces.Global;
 
 /**
@@ -23,16 +24,15 @@ public class Company {
     private List listAssembler;
     private int dayDuration;
     
-    public Company(String name, Warehouse warehouse,  int dayDuration) {
+    public Company(String name, int pcUntilSpecial) {
         this.name = name;
-        this.warehouse = warehouse;
+        this.warehouse = new Warehouse(pcUntilSpecial,name);
         this.listMotherboard = new List();
         this.listCPU = new List();;
         this.listRAM = new List();;
         this.listPowerSupply = new List();;
         this.listGraphic = new List();;
         this.listAssembler = new List();;
-        this.dayDuration = dayDuration;
     }
     
     public void AddWorker(int type, int quantity){
@@ -122,7 +122,74 @@ public class Company {
         }
     }
     
-
+    public void deleteWorker(int type){
+        if(type==0){
+                if (this.name.equals("Apple")){
+                    Node delete=getListMotherboard().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListMotherboard().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+        
+        if(type==1){
+                if (this.name.equals("Apple")){
+                    Node delete=getListCPU().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListCPU().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+        
+        if(type==2){
+                if (this.name.equals("Apple")){
+                    Node delete=getListRAM().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListRAM().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+        
+        if(type==3){
+                if (this.name.equals("Apple")){
+                    Node delete=getListPowerSupply().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListPowerSupply().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+        
+        if(type==4){
+                if (this.name.equals("Apple")){
+                    Node delete=getListGraphic().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListGraphic().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+        
+        if(type==5){
+                if (this.name.equals("Apple")){
+                    Node delete=getListAssembler().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+                else{
+                    Node delete=getListAssembler().deleteBegin();
+                    delete.getData().stopGoing();
+                }
+            }
+    }
+    
     public String getName() {
         return name;
     }

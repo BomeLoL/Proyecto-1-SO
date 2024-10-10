@@ -24,11 +24,10 @@ public class Warehouse {
     private int deadline;
     private int deadlineCounter; 
 
-    public Warehouse(int pcUntilSpecial, String company, int deadline, int deadlineCounter) {
+    public Warehouse(int pcUntilSpecial, String company) {
         this.pcUntilSpecial = pcUntilSpecial;
         this.company = company;
-        this.deadline = deadline;
-        this.deadlineCounter = deadlineCounter;
+
     }
 
     public void AddComponent(int type){
@@ -91,12 +90,25 @@ public class Warehouse {
 
     }
     
-    public void calculateProfit(float profit){
+    public void calculateProfitRegular(float profit){
         if (this.company.equals("Apple")){
-            
+            setIncome(getIncome() + income*100000);
+            setUtility(getIncome()- getCosts());
         }
         else{
-            
+            setIncome(getIncome()+income*180000);
+            setUtility(getIncome()- getCosts());
+        }
+    }
+    
+    public void calculateProfitSpecial(float profit){
+        if (this.company.equals("Apple")){
+            setIncome(getIncome() + income*150000);
+            setUtility(getIncome()- getCosts());
+        }
+        else{
+            setIncome(getIncome()+income*250000);
+            setUtility(getIncome()- getCosts());
         }
     }
 
