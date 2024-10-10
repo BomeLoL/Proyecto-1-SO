@@ -19,7 +19,7 @@ public class ProjectManager implements Runnable {
     private int infractions; 
     private double infractionDeduction; 
     private Semaphore daysSemaphore; 
-    private boolean isWatchingAnime; 
+    private boolean isWatchingAnime ; 
     private final int workhours = 8; 
     private final int animeWorlHours = 16; 
     private Random random; 
