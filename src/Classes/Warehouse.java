@@ -4,6 +4,8 @@
  */
 package Classes;
 
+import Interfaces.Global;
+
 /**
  *
  * @author kevin
@@ -94,10 +96,13 @@ public class Warehouse {
         if (this.company.equals("Apple")){
             setIncome(getIncome() + income*100000);
             setUtility(getIncome()- getCosts());
+            Global.addApple((int) getUtility(), (Global.getDaycounter()-1)/2);
+
         }
         else{
             setIncome(getIncome()+income*180000);
             setUtility(getIncome()- getCosts());
+            Global.addMSI((int) getUtility(), (Global.getDaycounter()-1)/2);
         }
     }
     
