@@ -74,37 +74,32 @@
               <Layout>
                 <DimensionLayout dim="0">
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" alignment="0" attributes="0">
+                      <Group type="102" attributes="0">
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="375" max="-2" attributes="0"/>
-                                  <Component id="jButton3" min="-2" pref="82" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
-                                  <Component id="saveButtonActionPerformed" min="-2" pref="212" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                          <EmptySpace pref="444" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="1" attributes="0">
-                              <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
-                              <Component id="Cont_Deadline" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="Cont_Day_Duration" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace pref="527" max="32767" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="301" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel34" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Cont_Deadline" min="-2" max="-2" attributes="0"/>
+                                  </Group>
                                   <EmptySpace min="-2" pref="77" max="-2" attributes="0"/>
                                   <Component id="jLabel35" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Component id="Cont_Day_Duration" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="375" max="-2" attributes="0"/>
+                                          <Component id="jButton3" min="-2" pref="82" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace min="-2" pref="312" max="-2" attributes="0"/>
+                                          <Component id="saveButtonActionPerformed" min="-2" pref="212" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
                               </Group>
                           </Group>
+                          <EmptySpace pref="431" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
@@ -160,8 +155,14 @@
                   </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Cont_Deadline">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Cont_DeadlineStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Cont_Day_Duration">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Cont_Day_DurationStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel34">
                   <Properties>
@@ -192,56 +193,35 @@
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="103" groupAlignment="1" attributes="0">
-                                  <Group type="102" attributes="0">
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" attributes="0">
-                                              <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
-                                              <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
-                                              <Component id="Apple_Deadline_Counter" min="-2" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="1" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel7" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="16" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace pref="36" max="32767" attributes="0"/>
+                                          <Component id="Apple_Gain_Counter" min="-2" pref="336" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
                                       </Group>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace min="-2" pref="41" max="-2" attributes="0"/>
-                                              <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Component id="Apple_Gain_Counter" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="-2" pref="161" max="-2" attributes="0"/>
-                                          </Group>
-                                          <Group type="102" alignment="1" attributes="0">
-                                              <EmptySpace max="32767" attributes="0"/>
-                                              <Group type="103" groupAlignment="0" attributes="0">
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="220" max="-2" attributes="0"/>
-                                                  </Group>
-                                                  <Group type="102" alignment="1" attributes="0">
-                                                      <Group type="103" groupAlignment="1" attributes="0">
-                                                          <Group type="102" attributes="0">
-                                                              <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
-                                                              <Component id="Apple_Loss_Counter" min="-2" max="-2" attributes="0"/>
-                                                          </Group>
-                                                          <Group type="102" alignment="1" attributes="0">
-                                                              <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
-                                                          </Group>
-                                                      </Group>
-                                                      <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
-                                                      <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
-                                                  </Group>
-                                              </Group>
-                                          </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="92" max="-2" attributes="0"/>
+                                          <Component id="Apple_Loss_Counter" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="85" max="-2" attributes="0"/>
+                                          <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="115" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
-                                  <Group type="102" alignment="0" attributes="0">
-                                      <Group type="103" groupAlignment="1" attributes="0">
+                              </Group>
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Group type="103" alignment="0" groupAlignment="1" attributes="0">
                                           <Component id="Apple_Pm_State" min="-2" max="-2" attributes="0"/>
                                           <Group type="102" attributes="0">
                                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
@@ -249,36 +229,42 @@
                                               <Component id="Apple_Director_State" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
-                                      <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
-                                          <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="0" attributes="0">
+                                              <Component id="Apple_Discount_Counter" min="-2" max="-2" attributes="0"/>
+                                              <Component id="Apple_Fail_Counter" min="-2" max="-2" attributes="0"/>
+                                          </Group>
                                       </Group>
-                                      <EmptySpace min="47" max="32767" attributes="0"/>
-                                      <Group type="103" groupAlignment="0" attributes="0">
-                                          <Component id="Const_ProduMemoRAM_Apple" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Const_ProduCPU_Apple" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Const_ProduPlaca_Apple" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Const_ProduFuenteAlime_Apple" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Const_ProduTarjegGraf_Apple" min="-2" max="-2" attributes="0"/>
-                                          <Component id="Const_Ensambladores_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="32767" attributes="0"/>
+                                          <Component id="Apple_Deadline_Counter" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="149" max="-2" attributes="0"/>
                                       </Group>
-                                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
                                   </Group>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="155" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="99" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="Apple_Discount_Counter" min="-2" max="-2" attributes="0"/>
-                                      <Component id="Apple_Fail_Counter" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel14" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel16" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace min="-2" pref="537" max="-2" attributes="0"/>
+                                  <EmptySpace max="32767" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="Const_ProduMemoRAM_Apple" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Const_ProduCPU_Apple" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Const_ProduPlaca_Apple" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Const_ProduFuenteAlime_Apple" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Const_ProduTarjegGraf_Apple" min="-2" max="-2" attributes="0"/>
+                                      <Component id="Const_Ensambladores_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                               </Group>
                           </Group>
-                          <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Component id="Warehouse_ProduPlacabase_Apple" min="-2" max="-2" attributes="0"/>
                               <Component id="Apple_Utility_Counter" min="-2" max="-2" attributes="0"/>
@@ -300,7 +286,7 @@
                               <Component id="jLabel11" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="Apple_Deadline_Counter" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="Apple_Gain_Counter" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="Apple_Gain_Counter" alignment="3" min="-2" pref="18" max="-2" attributes="0"/>
                               <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="Apple_Loss_Counter" alignment="3" min="-2" max="-2" attributes="0"/>
                               <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -356,10 +342,18 @@
                           <Group type="103" groupAlignment="0" attributes="0">
                               <Group type="102" attributes="0">
                                   <Component id="jLabel16" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="3" attributes="0">
-                                      <Component id="jLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
-                                      <Component id="Apple_Discount_Counter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="102" attributes="0">
+                                          <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                                          <Group type="103" groupAlignment="3" attributes="0">
+                                              <Component id="jLabel7" alignment="3" min="-2" pref="25" max="-2" attributes="0"/>
+                                              <Component id="Apple_Discount_Counter" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <Group type="102" alignment="0" attributes="0">
+                                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                                          <Component id="jLabel18" min="-2" max="-2" attributes="0"/>
+                                      </Group>
                                   </Group>
                               </Group>
                               <Group type="102" alignment="0" attributes="0">
@@ -370,28 +364,45 @@
                                   <EmptySpace type="unrelated" max="-2" attributes="0"/>
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="Const_Ensambladores_Apple" alignment="0" min="-2" max="-2" attributes="0"/>
-                                      <Component id="jLabel18" alignment="3" min="-2" max="-2" attributes="0"/>
                                       <Component id="Warehouse_Ensambla_Apple" alignment="3" min="-2" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
-                          <EmptySpace pref="83" max="32767" attributes="0"/>
+                          <EmptySpace pref="82" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                 </DimensionLayout>
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JSpinner" name="Const_ProduPlaca_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduPlaca_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduCPU_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduCPU_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduMemoRAM_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduMemoRAM_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduFuenteAlime_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduFuenteAlime_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduTarjegGraf_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduTarjegGraf_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_Ensambladores_Apple">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_Ensambladores_AppleStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="Apple_Director_State">
                   <Properties>
@@ -760,16 +771,34 @@
               </Layout>
               <SubComponents>
                 <Component class="javax.swing.JSpinner" name="Const_ProduPlaca_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduPlaca_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduCPU_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduCPU_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduMemoRAM_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduMemoRAM_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduFuenteAlime_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduFuenteAlime_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_ProduTarjegGraf_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_ProduTarjegGraf_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JSpinner" name="Const_Ensambladores_MSI">
+                  <Events>
+                    <EventHandler event="stateChanged" listener="javax.swing.event.ChangeListener" parameters="javax.swing.event.ChangeEvent" handler="Const_Ensambladores_MSIStateChanged"/>
+                  </Events>
                 </Component>
                 <Component class="javax.swing.JLabel" name="jLabel12">
                   <Properties>
