@@ -5,6 +5,7 @@
 
 package Classes;
 
+import Interfaces.Global;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
@@ -12,137 +13,141 @@ import java.util.concurrent.Semaphore;
  *
  * @author andreaV 
  */
-public class ProjectManager implements Runnable {
-    
-    private int remainingDays; 
-    private double salary; 
-    private int infractions; 
-    private double infractionDeduction; 
-    private Semaphore daysSemaphore; 
-    private boolean isWatchingAnime ; 
-    private final int workhours = 8; 
-    private final int animeWorlHours = 16; 
-    private Random random; 
-    
+public class ProjectManager extends Thread {
+    private int salaryPerHour;
+    private int dayDuration;
+    private float salaryTotal=0;
+    private int hours;
+    private Semaphore mutex;
+    private Warehouse warehouse;
+    private String status = "Trabajando";
+    private int moneyDeducted = 0;
+    private int faults = 0;
 
-    public ProjectManager(int remainingDays, Semaphore daysSemaphore) {
-        this.remainingDays = remainingDays;
-        this.salary = 40; // $40 por hora, trabaje o vea anime
-        this.infractions = 0;
-        this.infractionDeduction = 0;
-        this.daysSemaphore = daysSemaphore;
-        this.isWatchingAnime = false;
-        this.random = new Random();
+    public ProjectManager(int salaryPerHour, int dayDuration, Semaphore mutex, Warehouse warehouse) {
+        this.salaryPerHour = salaryPerHour;
+        this.dayDuration = dayDuration;
+        this.hours = this.dayDuration/24;
+        this.mutex = mutex;
+        this.warehouse = warehouse;
     }
+    
 
     @Override
     public void run() {
-        for (int hour = 0; hour < 24; hour++) {
-            if (hour < animeWorlHours) {  // Las primeras 16 horas del día alterna entre ver anime y trabajar
-                if (hour % 2 == 0) {
-                    watchAnime(hour);
-                } else {
-                    workOnProject(hour);
-                }
-            } else if (hour < animeWorlHours + workhours) { // Últimas 8 horas del día las invierte en actualizar el contador de días
-                try {
-                    updateDaysCounter();
-                } catch (InterruptedException ex) {
-                    ex.printStackTrace();
+    
+        while(true){
+            //primero se hace que pasen las 16 horas
+            for (int i=1; i<=16; i++){
+                try{
+                    this.status="Trabajando";
+                    sleep(this.hours/2); //espera media hora
+                    this.status="Viendo anime";
+                    sleep(this.hours/2);
+                } catch (InterruptedException ex){
+                    System.out.println("error en el project manager 1");
                 }
             }
+        this.status="Trabajando";
+        try{
+            //ya pasaron las 16 horas, ahora trabaja durante 8 horas
+            sleep(this.hours*8); //pasan las 8 horas y baja el contador
+            this.mutex.acquire();
+            if(this.warehouse.getDeadlineCounter()>0){
+                this.warehouse.setDeadlineCounter(this.warehouse.getDeadlineCounter()-1);
+            }
+            Global.setDaycounter(Global.getDaycounter()+1);
+            this.warehouse.setCosts(this.warehouse.getCosts()+this.salaryPerHour*24);
+            this.mutex.release();
+            this.salaryTotal+=this.salaryPerHour*24;
+        } catch (InterruptedException ex){
+            System.out.println("error en el project manager 2");
         }
-    }
-
-  
-    private void watchAnime(int hour) {
-        isWatchingAnime = true;
-        System.out.println("PM está viendo anime a la hora: " + hour);
-    }
-
-    
-    private void workOnProject(int hour) {
-        isWatchingAnime = false;
-        System.out.println("PM está trabajando en el proyecto a la hora: " + hour);
-    }
-
-    
-    private void updateDaysCounter() throws InterruptedException {
-        daysSemaphore.acquire(); 
-        try {
-            remainingDays--;
-            System.out.println("PM actualiza el contador. Días restantes: " + remainingDays);
-        } finally {
-            daysSemaphore.release(); 
         }
+        
     }
 
+    public int getSalaryPerHour() {
+        return salaryPerHour;
+    }
+
+    public void setSalaryPerHour(int salaryPerHour) {
+        this.salaryPerHour = salaryPerHour;
+    }
+
+    public int getDayDuration() {
+        return dayDuration;
+    }
+
+    public void setDayDuration(int dayDuration) {
+        this.dayDuration = dayDuration;
+    }
+
+    public float getSalaryTotal() {
+        return salaryTotal;
+    }
+
+    public void setSalaryTotal(float salaryTotal) {
+        this.salaryTotal = salaryTotal;
+    }
+
+    public int getHours() {
+        return hours;
+    }
+
+    public void setHours(int hours) {
+        this.hours = hours;
+    }
+
+    public Semaphore getMutex() {
+        return mutex;
+    }
+
+    public void setMutex(Semaphore mutex) {
+        this.mutex = mutex;
+    }
+
+    public Warehouse getWarehouse() {
+        return warehouse;
+    }
+
+    public void setWarehouse(Warehouse warehouse) {
+        this.warehouse = warehouse;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public int getMoneyDeducted() {
+        return moneyDeducted;
+    }
+
+    public void setMoneyDeducted(int moneyDeducted) {
+        this.moneyDeducted = moneyDeducted;
+    }
+
+    public int getFaults() {
+        return faults;
+    }
+
+    public void setFaults(int faults) {
+        this.faults = faults;
+    }
     
-    public void receiveInfraction() {
-        infractions++;
-        infractionDeduction += 100;
-        System.out.println("PM recibe una infracción. Total infracciones: " + infractions + ". Deducción total: $" + infractionDeduction);
-    }
-
-   
-    public int getRemainingDays() {
-        return remainingDays;
-    }
-
-    public void setRemainingDays(int remainingDays) {
-        this.remainingDays = remainingDays;
-    }
-
-    
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
-        this.salary = salary;
-    }
-
- 
-    public int getInfractions() {
-        return infractions;
-    }
-
-    public void setInfractions(int infractions) {
-        this.infractions = infractions;
-    }
-
-   
-    public double getInfractionDeduction() {
-        return infractionDeduction;
-    }
-
-    public void setInfractionDeduction(double infractionDeduction) {
-        this.infractionDeduction = infractionDeduction;
-    }
-
- 
-    public Semaphore getDaysSemaphore() {
-        return daysSemaphore;
-    }
-
-    public void setDaysSemaphore(Semaphore daysSemaphore) {
-        this.daysSemaphore = daysSemaphore;
-    }
-
-    
-    public boolean isWatchingAnime() {
-        return isWatchingAnime;
-    }
 }
     
     
     
     
-            
     
-
-
-
+    
+    
+           
 
 
 

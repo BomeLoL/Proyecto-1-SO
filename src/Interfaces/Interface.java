@@ -4,8 +4,21 @@
  */
 package Interfaces;
 
+import java.awt.BasicStroke;
+import java.awt.Color;
+import Classes.Company;
+import Classes.ProjectManager;
+import Classes.Director;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
 import javax.swing.JOptionPane;
-
+import javax.swing.JSpinner;
+import java.io.PrintWriter;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.filechooser.FileNameExtensionFilter;
+ 
 
 /**
  *
@@ -13,8 +26,12 @@ import javax.swing.JOptionPane;
  */
 public class Interface extends javax.swing.JFrame {
 
-    boolean iniciado=false;
-    private String path;
+            Company Apple = new Company("Apple",Warehouse, 5);
+            boolean iniciado=false;
+            private String path;
+            int max_apple = 13; //Carnet de Kevin termina en 1
+            int max_msi = 15; //Carnet de Andrea termina en 3
+    
 
     /**
      * Creates new form Ventana
@@ -23,6 +40,16 @@ public class Interface extends javax.swing.JFrame {
         initComponents();
 
     }
+    
+    public static JLabel getApple_Deadline_Counter() {
+        return Apple_Deadline_Counter;
+    }
+    
+    
+     public static JLabel getMSI_Deadline_Counter() {
+        return MSI_Deadline_Counter;
+    }
+    
 
     public String getPath() {
         return path;
@@ -46,7 +73,6 @@ public class Interface extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel2 = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
         saveButtonActionPerformed = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
         Cont_Deadline = new javax.swing.JSpinner();
@@ -58,6 +84,22 @@ public class Interface extends javax.swing.JFrame {
         Const_ProduFuenteAlime_Apple = new javax.swing.JSpinner();
         Const_ProduTarjegGraf_Apple = new javax.swing.JSpinner();
         Const_Ensambladores_Apple = new javax.swing.JSpinner();
+        Cn_Director_State = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        Apple_Deadline_Counter = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Const_ProduPlaca_MSI = new javax.swing.JSpinner();
         Const_ProduCPU_MSI = new javax.swing.JSpinner();
@@ -65,6 +107,22 @@ public class Interface extends javax.swing.JFrame {
         Const_ProduFuenteAlime_MSI = new javax.swing.JSpinner();
         Const_ProduTarjegGraf_MSI = new javax.swing.JSpinner();
         Const_Ensambladores_MSI = new javax.swing.JSpinner();
+        jLabel12 = new javax.swing.JLabel();
+        MSI_Deadline_Counter = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -77,15 +135,6 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jTabbedPane1.setBackground(new java.awt.Color(214, 189, 162));
-
-        jButton1.setBackground(new java.awt.Color(132, 92, 71));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Insertar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
 
         saveButtonActionPerformed.setBackground(new java.awt.Color(132, 92, 71));
         saveButtonActionPerformed.setForeground(new java.awt.Color(255, 255, 255));
@@ -113,9 +162,7 @@ public class Interface extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(375, 375, 375)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                             .addGap(301, 301, 301)
@@ -125,7 +172,7 @@ public class Interface extends javax.swing.JFrame {
                         .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
                             .addGap(312, 312, 312)
                             .addComponent(saveButtonActionPerformed, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(331, Short.MAX_VALUE))
+                .addContainerGap(351, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -136,81 +183,303 @@ public class Interface extends javax.swing.JFrame {
                     .addComponent(Cont_Day_Duration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(52, 52, 52)
                 .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 160, Short.MAX_VALUE)
-                .addComponent(jButton1)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 201, Short.MAX_VALUE)
                 .addComponent(saveButtonActionPerformed)
                 .addGap(62, 62, 62))
         );
 
         jTabbedPane1.addTab("Inicio", jPanel2);
 
+        Cn_Director_State.setText("Trabajando");
+
+        jLabel4.setText("Trabajando");
+
+        jLabel5.setText("Faltas (PM)");
+
+        jLabel6.setText("0");
+
+        jLabel7.setText("Sueldo descontado");
+
+        jLabel8.setText("0");
+
+        jLabel9.setText("Project Manager");
+
+        jLabel10.setText("Director");
+
+        jLabel11.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel11.setText("Deadline");
+
+        Apple_Deadline_Counter.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        Apple_Deadline_Counter.setText("0");
+
+        jLabel13.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel13.setText("Ganancias");
+
+        jLabel14.setText("0");
+
+        jLabel15.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel15.setText("Gastos");
+
+        jLabel16.setText("0");
+
+        jLabel17.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel17.setText("Utilidad");
+
+        jLabel18.setText("0");
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(688, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(103, 103, 103))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(32, 32, 32)
+                        .addComponent(jLabel11)
+                        .addGap(40, 40, 40)
+                        .addComponent(Apple_Deadline_Counter)
+                        .addGap(68, 68, 68)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel13)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                        .addComponent(jLabel14)
+                                        .addGap(97, 97, 97)
+                                        .addComponent(jLabel15)
+                                        .addGap(92, 92, 92)
+                                        .addComponent(jLabel16))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel7)
+                                        .addGap(128, 128, 128)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel6)
+                                            .addComponent(jLabel8))
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGap(135, 135, 135)
+                                        .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(jLabel17)
+                                        .addGap(73, 73, 73))))
+                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addComponent(jLabel5)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                    .addGroup(jPanel3Layout.createSequentialGroup()
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addComponent(jLabel9)
+                                            .addComponent(jLabel10))
+                                        .addGap(118, 118, 118)
+                                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(Cn_Director_State)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                            .addGroup(jPanel3Layout.createSequentialGroup()
+                                                .addComponent(jLabel4)
+                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                .addGap(1, 1, 1)
+                .addComponent(jLabel18)
+                .addGap(53, 53, 53))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
-                .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(84, 84, 84)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel11)
+                    .addComponent(Apple_Deadline_Counter)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(143, 143, 143)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(Cn_Director_State))
+                        .addGap(33, 33, 33)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel4))))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel6)))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGap(12, 12, 12)
+                        .addComponent(jLabel5)))
                 .addGap(18, 18, 18)
-                .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("Apple", jPanel3);
+
+        jLabel12.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel12.setText("Deadline");
+
+        MSI_Deadline_Counter.setText("0");
+
+        jLabel20.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel20.setText("Ganancias");
+
+        jLabel21.setText("0");
+
+        jLabel22.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel22.setText("Gastos");
+
+        jLabel23.setText("0");
+
+        jLabel24.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jLabel24.setText("Utilidad");
+
+        jLabel25.setText("0");
+
+        jLabel19.setText("Director");
+
+        jLabel26.setText("Project Manager");
+
+        jLabel27.setText("Trabajando");
+
+        jLabel28.setText("Trabajando");
+
+        jLabel29.setText("Faltas (PM)");
+
+        jLabel30.setText("0");
+
+        jLabel31.setText("Sueldo descontado");
+
+        jLabel32.setText("0");
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addContainerGap(686, Short.MAX_VALUE)
+                .addGap(33, 33, 33)
+                .addComponent(jLabel12)
+                .addGap(43, 43, 43)
+                .addComponent(MSI_Deadline_Counter)
+                .addGap(67, 67, 67)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduCPU_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Const_ProduPlaca_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(105, 105, 105))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addGap(90, 90, 90)
+                        .addComponent(jLabel21)
+                        .addGap(100, 100, 100)
+                        .addComponent(jLabel22)
+                        .addGap(91, 91, 91)
+                        .addComponent(jLabel23))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel29)
+                            .addComponent(jLabel31))
+                        .addGap(90, 90, 90)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel32)
+                            .addComponent(jLabel30)))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel19)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jLabel27))
+                        .addGroup(jPanel4Layout.createSequentialGroup()
+                            .addComponent(jLabel26)
+                            .addGap(80, 80, 80)
+                            .addComponent(jLabel28))))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Const_ProduCPU_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Const_ProduPlaca_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(58, 58, 58))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addComponent(jLabel24)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE)
+                        .addComponent(jLabel25)
+                        .addGap(55, 55, 55))))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(140, 140, 140)
+                .addGap(85, 85, 85)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel12)
+                    .addComponent(MSI_Deadline_Counter)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel21)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel25))
+                .addGap(81, 81, 81)
                 .addComponent(Const_ProduPlaca_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(Const_ProduCPU_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
-                .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(146, Short.MAX_VALUE))
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel26)
+                                    .addComponent(jLabel28))
+                                .addGap(33, 33, 33)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(jLabel29)
+                                    .addComponent(jLabel30))
+                                .addGap(25, 25, 25))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel31)
+                            .addComponent(jLabel32)
+                            .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel19)
+                        .addComponent(jLabel27)))
+                .addContainerGap(92, Short.MAX_VALUE))
         );
 
         jTabbedPane1.addTab("MSI", jPanel4);
@@ -257,7 +526,7 @@ public class Interface extends javax.swing.JFrame {
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(365, 365, 365)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 263, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 283, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel5Layout.createSequentialGroup()
                         .addComponent(jLabel2)
@@ -294,11 +563,11 @@ public class Interface extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 855, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 549, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -314,10 +583,6 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void saveButtonActionPerformedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformedActionPerformed
         // TODO add your handling code here:
@@ -365,14 +630,269 @@ public class Interface extends javax.swing.JFrame {
         }else{
             JOptionPane.showMessageDialog(null,"La simulación no ha empezado todavía, no se puede guardar");
         }
-    }                                          
-
-        
+                                              
         
     }//GEN-LAST:event_saveButtonActionPerformedActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
+        
+        //    //se lee el txt
+    if (iniciado==false){
+        iniciado=true;
+    JFileChooser file = new JFileChooser();
+    FileNameExtensionFilter filter = new FileNameExtensionFilter(".TXT","txt");
+    file.setFileSelectionMode(JFileChooser.FILES_ONLY);
+    file.setFileFilter(filter);
+    int selection=file.showOpenDialog(this);
+    
+    if(selection==JFileChooser.APPROVE_OPTION) {
+        File archive=file.getSelectedFile(); 
+        String path=archive.getAbsolutePath();
+        setPath(path);
+    
+        if(!path.contains("txt")) {
+        JOptionPane.showMessageDialog(null, "Por favor elija un archivo del tipo txt");
+        }
+        else {
+        try{
+            File archivo = new File (path);
+            FileReader fr = new FileReader(archivo); 
+            BufferedReader br = new BufferedReader(fr); 
+                 
+            String cadena;
+            String complete=""; 
+      
+            while ((cadena=br.readLine())!=null) { //lee hasta llegar a null que significa que se acabo el archivo
+
+                if(!cadena.isEmpty()&& !cadena.isBlank()) { //revisa que la linea no sea vacia/que el tamaño de la cadena sea 0
+                    complete+=cadena+"\n";
+                }
+            }
+                
+            fr.close();
+            br.close();
+            complete=complete.trim(); //quita linea en blanco al final
+            //el !"".equals es para verificar que el string no sea solo un espacio en blanco
+            if(!"".equals(complete)) {
+                String[] info;
+                String [] todo=complete.split(";");
+                String [] Dias=todo[0].split("\n");
+                int duracionDias=Integer.parseInt(Dias[1]);
+                if(duracionDias<=0) {
+                    throw new Exception("La duracion del dia no puede ser 0");
+                }
+                this.Cont_Day_Duration.setValue(duracionDias);
+                //System.out.println(duracionDias); //todo bien aqui
+                String[] Diasdead=todo[1].split("\n");
+                //System.out.println(Diasdead[1]);
+                int Deadline=Integer.parseInt(Diasdead[2]);
+                if(Deadline<=0) {
+                    throw new Exception("El tiempo de entrega no puede ser 0");
+                }
+                this.Cont_Deadline.setValue(Deadline);
+                getApple_Deadline_Counter().setText(Integer.toString(Deadline));
+                getMSI_Deadline_Counter().setText(Integer.toString(Deadline));
+                
+                //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
+                nick.setDuracionDia(duracionDias);
+                cn.setDuracionDia(duracionDias);
+                nick.setDiasEntrega(Deadline);
+                cn.setDiasEntrega(Deadline);
+                
+                nick.getPersonalDrive().setDiasEntrega(Deadline);
+                nick.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                
+                cn.getPersonalDrive().setDiasEntrega(Deadline);
+                cn.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                
+                ProjectManager nickpm=new ProjectManager(40,duracionDias,nick.getMutex(),nick.getPersonalDrive());
+                Director nickDir = new Director(60, duracionDias, nick.getMutex(), nick.getPersonalDrive(), nickpm);
+                ProjectManager cartoonpm=new ProjectManager(40,duracionDias,cn.getMutex(),cn.getPersonalDrive());
+                Director cartoonDir = new Director(60, duracionDias, cn.getMutex(), cn.getPersonalDrive(), cartoonpm);
+                
+               //todo2 tiene cosas de cartoon
+                todo[2]=todo[2].trim();
+                String [] infoestu1=todo[2].split("-");
+                //todo3 tiene cosas de nick
+                todo[3]=todo[3].trim();
+                String [] infoestu2=todo[3].split("-");
+                
+                if (infoestu1[0].compareTo("Cartoon")==0) { //el if es porsia 
+//                     System.out.println("jajajaj "+infoestu1[0]);
+//                     System.out.println(infoestu1[1]);
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            cn.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                         }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
+                     }
+                    if(cn.getListaAnimacion().getSize()+cn.getListaDoblaje().getSize()+cn.getListaEnsamblador().getSize()+cn.getListaEscenario().getSize()+cn.getListaGuion().getSize()+cn.getListaPlotTwist().getSize()>12){
+                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                    }
+                    cartoonpm.start();
+                    cartoonDir.start();
+                    System.out.println("Listo cartoon");
+                    this.Const_ProduPlaca_Apple.setValue(cn.getListaDoblaje().getSize());
+                    this.Const_ProduCPU_Apple.setValue(cn.getListaAnimacion().getSize());
+                    this.Const_ProduCPU_Apple.setValue(cn.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
+                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                 
+                 }
+                 else if (infoestu1[0].compareTo("Nick")==0) {
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            nick.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                         } else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
+                    }
+                    nickpm.start();
+                    nickDir.start(); 
+                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
+                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
+                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    
+                 }
+                 
+                 if (infoestu2[0].compareTo("Cartoon")==0) {
+//                     System.out.println("jejejeje "+infoestu2[0]);
+//                     System.out.println(infoestu2[1]);
+                     infoestu1[1]=infoestu1[1].trim();
+                     String [] divTra=infoestu1[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         if(Integer.parseInt(cantidad[1])>0) { 
+                         cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                        }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
+                     }
+                    cartoonpm.start();
+                    cartoonDir.start(); 
+                    this.Cont_Actor_Doblaje_CN.setValue(cn.getListaDoblaje().getSize());
+                    this.Cont_Animador_CN.setValue(cn.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_CN.setValue(cn.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
+                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                 }
+                 else if (infoestu2[0].compareTo("Nick")==0) {
+                     String [] divTra=infoestu2[1].split(":");
+                     divTra[1]=divTra[1].trim();
+                     String [] trabajadores=divTra[1].split("\n");
+                     System.out.println(infoestu2[0]);
+                     for (int i = 0; i < trabajadores.length; i++) {
+                         //System.out.println(i+" "+trabajadores[i]);
+                         String [] cantidad=trabajadores[i].split(",");
+                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                         //System.out.println(cantidad[1]);
+                         if(Integer.parseInt(cantidad[1])>0) {
+                            nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                         }else {
+                         throw new Exception("La cantidad de trabajadores no puede ser 0");
+                         }
+                         
+                     }
+                    if(nick.getListaAnimacion().getSize()+nick.getListaDoblaje().getSize()+nick.getListaEnsamblador().getSize()+nick.getListaEscenario().getSize()+nick.getListaGuion().getSize()+nick.getListaPlotTwist().getSize()>13){
+                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                    }
+                    nickpm.start();
+                    nickDir.start(); 
+                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
+                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
+                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
+                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
+                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
+                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                      
+                      System.out.println("Listo nick");
+                 
+                 
+                 }
+                 
+                
+//                for (int i = 0; i < todo.length; i++) {
+//                  System.out.println(todo[i]);  
+//                }
+                
+            
+            }
+                
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erorr!!!! Asegurate de haber cargado el archivo correcto");
+            System.exit(0);
+            }
+        }
+        
+    //Aquí se crea todo el tema de la gráfica    
+    Global.addCn(0, 0);
+    Global.addNk(0, 0);
+    Global.addSeries(Global.getCn());
+    Global.addSeries(Global.getNk());
+        
+    JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
+        
+    final XYPlot plot = chart.getXYPlot( );
+        
+    ChartPanel barPanel = new ChartPanel(chart);
+        
+    XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
+    renderer.setSeriesPaint( 0 , Color.BLACK );
+    renderer.setSeriesPaint( 1 , Color.RED);
+    renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
+    renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
+    plot.setRenderer( renderer );
+
+    panelChart.removeAll();
+    panelChart.add(barPanel);
+    panelChart.validate();
+    
+    } else {
+        JOptionPane.showMessageDialog(null, "ERROR");
+        System.exit(0);
+    }
+    } else{
+        JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
+    }
+
 
                                   
     }//GEN-LAST:event_jButton3ActionPerformed
@@ -414,6 +934,8 @@ public class Interface extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private static javax.swing.JLabel Apple_Deadline_Counter;
+    private javax.swing.JLabel Cn_Director_State;
     private javax.swing.JSpinner Const_Ensambladores_Apple;
     private javax.swing.JSpinner Const_Ensambladores_MSI;
     private javax.swing.JSpinner Const_ProduCPU_Apple;
@@ -428,11 +950,40 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JSpinner Const_ProduTarjegGraf_MSI;
     private javax.swing.JSpinner Cont_Day_Duration;
     private javax.swing.JSpinner Cont_Deadline;
-    private javax.swing.JButton jButton1;
+    private static javax.swing.JLabel MSI_Deadline_Counter;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
