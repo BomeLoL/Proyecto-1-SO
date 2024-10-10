@@ -26,7 +26,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  */
 public class Interface extends javax.swing.JFrame {
 
-            Company Apple = new Company("Apple",Warehouse, 5);
+            Company Apple = new Company("Apple", 5);
+            Company MSI = new Company("MSI", 5);
             boolean iniciado=false;
             private String path;
             int max_apple = 13; //Carnet de Kevin termina en 1
@@ -588,28 +589,29 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
         
           if(iniciado == true){
-            //MSI
-            int placaMSI=(int) this.Const_ProduPlaca_Apple.getValue();
-            int cpuMSI=(int) this.Const_ProduCPU_Apple.getValue();
-            int ramMSI=(int) this.Const_ProduMemoRAM_Apple.getValue();
-            int fuenteAlimeMSI=(int) this.Const_ProduFuenteAlime_Apple.getValue();
-            int tarjeGrafMSI=(int) this.Const_ProduTarjegGraf_Apple.getValue();
-            int EnsambladoresMSI=(int) this.Const_Ensambladores_Apple.getValue();
             //Apple
-            int placaApple=(int) this.Const_ProduPlaca_MSI.getValue();
-            int cpuApple=(int) this.Const_ProduCPU_MSI.getValue();
-            int ramApple=(int) this.Const_ProduMemoRAM_MSI.getValue();
-            int fuenteAlimeApple=(int) this.Const_ProduFuenteAlime_MSI.getValue();
-            int tarjeGrafApple=(int) this.Const_ProduTarjegGraf_MSI.getValue();
-            int EnsambladoresApple=(int) this.Const_Ensambladores_MSI.getValue();
+            int placaApple=(int) this.Const_ProduPlaca_Apple.getValue();
+            int cpuApple=(int) this.Const_ProduCPU_Apple.getValue();
+            int ramApple=(int) this.Const_ProduMemoRAM_Apple.getValue();
+            int fuenteAlimeApple=(int) this.Const_ProduFuenteAlime_Apple.getValue();
+            int tarjeGrafApple=(int) this.Const_ProduTarjegGraf_Apple.getValue();
+            int EnsambladoresApple=(int) this.Const_Ensambladores_Apple.getValue();
+            //MSI
+             int placaMSI=(int) this.Const_ProduPlaca_MSI.getValue();
+            int cpuMSI=(int) this.Const_ProduCPU_MSI.getValue();
+            int ramMSI=(int) this.Const_ProduMemoRAM_MSI.getValue();
+            int fuenteAlimeMSI=(int) this.Const_ProduFuenteAlime_MSI.getValue();
+            int tarjeGrafMSI=(int) this.Const_ProduTarjegGraf_MSI.getValue();
+            int EnsambladoresMSI=(int) this.Const_Ensambladores_MSI.getValue();
             
             int deadline=(int) this.Cont_Deadline.getValue();
             int DuracionD=(int) this.Cont_Day_Duration.getValue();
+          
             
-            String TodoTXT="Duracion\n"+DuracionD+";\nDeadline\n"+deadline+";\nMSI-\nTrabajadores:\nProductoresPlaca,"+placaMSI+
-                    "\ncpu,"+cpuMSI+"\nram,"+ramMSI+"\nFuenteAlimentacion,"+fuenteAlimeMSI+"\nTarjetagrafica,"+tarjeGrafMSI+"\nensambladores,"+EnsambladoresMSI+";\n"
-                    + "Apple-\nTrabajadores:\nProductoresPlaca,"+placaApple+
-                    "\ncpu,"+cpuApple+"\nram,"+ramApple+"\nFuenteAlimentacion,"+fuenteAlimeApple+"\nTarjetagrafica,"+tarjeGrafApple+"\nensambladores,"+EnsambladoresApple;
+             String TodoTXT="Duracion\n"+DuracionD+";\nDeadline\n"+deadline+";\nApple-\nTrabajadores:\nProductoresPlaca,"+placaApple+
+                    "\ncpu,"+cpuApple+"\nram,"+ramApple+"\nFuenteAlimentacion,"+fuenteAlimeApple+"\nTarjetagrafica,"+tarjeGrafApple+"\nensambladores,"+EnsambladoresApple+";\n"
+                    + "MSI-\nTrabajadores:\nProductoresPlaca,"+placaMSI+
+                    "\ncpu,"+cpuMSI+"\nram,"+ramMSI+"\nFuenteAlimentacion,"+fuenteAlimeMSI+"\nTarjetagrafica,"+tarjeGrafMSI+"\nensambladores,"+EnsambladoresMSI;
             
 //            System.out.println(TodoTXT);
             
@@ -635,7 +637,7 @@ public class Interface extends javax.swing.JFrame {
     }//GEN-LAST:event_saveButtonActionPerformedActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
+                // TODO add your handling code here:
         
         //    //se lee el txt
     if (iniciado==false){
@@ -695,21 +697,21 @@ public class Interface extends javax.swing.JFrame {
                 getMSI_Deadline_Counter().setText(Integer.toString(Deadline));
                 
                 //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
-                nick.setDuracionDia(duracionDias);
-                cn.setDuracionDia(duracionDias);
-                nick.setDiasEntrega(Deadline);
-                cn.setDiasEntrega(Deadline);
+                MSI.setDayDuration(duracionDias);
+                Apple.setDayDuration(duracionDias);
+                MSI.setDeliveryDay(Deadline);
+                Apple.setDeliveryDay(Deadline);
                 
-                nick.getPersonalDrive().setDiasEntrega(Deadline);
-                nick.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                MSI.getWarehouse().setDeadlineCounter(Deadline);
+                MSI.getWarehouse().setDeadline(Deadline);
                 
-                cn.getPersonalDrive().setDiasEntrega(Deadline);
-                cn.getPersonalDrive().setDiasEntregaOriginal(Deadline);
+                Apple.getWarehouse().setDeadlineCounter(Deadline);
+                Apple.getWarehouse().setDeadline(Deadline);
                 
-                ProjectManager nickpm=new ProjectManager(40,duracionDias,nick.getMutex(),nick.getPersonalDrive());
-                Director nickDir = new Director(60, duracionDias, nick.getMutex(), nick.getPersonalDrive(), nickpm);
-                ProjectManager cartoonpm=new ProjectManager(40,duracionDias,cn.getMutex(),cn.getPersonalDrive());
-                Director cartoonDir = new Director(60, duracionDias, cn.getMutex(), cn.getPersonalDrive(), cartoonpm);
+                ProjectManager MSIpm=new ProjectManager(40,duracionDias,Global.getMutexMSI(),MSI.getWarehouse());
+                Supervisor MSISuper = new Supervisor(60,Global.getMutexMSI(),duracionDias,MSI.getWarehouse(), MSIpm);
+                ProjectManager Applepm=new ProjectManager(40,duracionDias,Global. getMutexApple(),Apple.getWarehouse());
+                Supervisor AppleSuper = new Supervisor(60,Global.getMutexApple(),duracionDias,Apple.getWarehouse(),Applepm) ;
                 
                //todo2 tiene cosas de cartoon
                 todo[2]=todo[2].trim();
@@ -718,7 +720,7 @@ public class Interface extends javax.swing.JFrame {
                 todo[3]=todo[3].trim();
                 String [] infoestu2=todo[3].split("-");
                 
-                if (infoestu1[0].compareTo("Cartoon")==0) { //el if es porsia 
+                if (infoestu1[0].compareTo("Apple")==0) { //el if es porsia 
 //                     System.out.println("jajajaj "+infoestu1[0]);
 //                     System.out.println(infoestu1[1]);
                      infoestu1[1]=infoestu1[1].trim();
@@ -733,27 +735,27 @@ public class Interface extends javax.swing.JFrame {
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
                          if(Integer.parseInt(cantidad[1])>0) {
-                            cn.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                            Apple.AddWorker(i,Integer.parseInt(cantidad[1]));
                          }else {
                          throw new Exception("La cantidad de trabajadores no puede ser 0");
                          }
                          
                      }
-                    if(cn.getListaAnimacion().getSize()+cn.getListaDoblaje().getSize()+cn.getListaEnsamblador().getSize()+cn.getListaEscenario().getSize()+cn.getListaGuion().getSize()+cn.getListaPlotTwist().getSize()>12){
+                    if(Apple.getListMotherboard().getSize()+Apple.getListCPU().getSize()+Apple.getListRAM().getSize()+Apple.getListPowerSupply().getSize()+Apple.getListGraphic().getSize()+Apple.getListAssembler().getSize()>12){
                         throw new Exception("La cantidad de trabajadores no puede ser 0");
                     }
-                    cartoonpm.start();
-                    cartoonDir.start();
-                    System.out.println("Listo cartoon");
-                    this.Const_ProduPlaca_Apple.setValue(cn.getListaDoblaje().getSize());
-                    this.Const_ProduCPU_Apple.setValue(cn.getListaAnimacion().getSize());
-                    this.Const_ProduCPU_Apple.setValue(cn.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
-                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                    Applepm.start();
+                    AppleSuper.start();
+                    System.out.println("Listo apple");
+                    this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
+                    this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
+                    this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
+                    this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
+                    this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
+                    this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
                  
                  }
-                 else if (infoestu1[0].compareTo("Nick")==0) {
+                 else if (infoestu1[0].compareTo("MSI")==0) {
                      infoestu1[1]=infoestu1[1].trim();
                      String [] divTra=infoestu1[1].split(":");
                      divTra[1]=divTra[1].trim();
@@ -766,24 +768,24 @@ public class Interface extends javax.swing.JFrame {
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
                          if(Integer.parseInt(cantidad[1])>0) {
-                            nick.AddDeveloper(i,Integer.parseInt(cantidad[1]));
+                            MSI.AddWorker(i,Integer.parseInt(cantidad[1]));
                          } else {
                          throw new Exception("La cantidad de trabajadores no puede ser 0");
                          }
                          
                     }
-                    nickpm.start();
-                    nickDir.start(); 
-                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
-                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
-                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    MSIpm.start();
+                    MSISuper.start(); 
+                    this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
+                    this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
+                    this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
+                    this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
+                    this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
+                    this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
                     
                  }
                  
-                 if (infoestu2[0].compareTo("Cartoon")==0) {
+                 if (infoestu2[0].compareTo("Apple")==0) {
 //                     System.out.println("jejejeje "+infoestu2[0]);
 //                     System.out.println(infoestu2[1]);
                      infoestu1[1]=infoestu1[1].trim();
@@ -798,22 +800,22 @@ public class Interface extends javax.swing.JFrame {
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
                          if(Integer.parseInt(cantidad[1])>0) { 
-                         cn.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                         Apple.AddWorker(i, Integer.parseInt(cantidad[1]));
                         }else {
                          throw new Exception("La cantidad de trabajadores no puede ser 0");
                          }
                          
                      }
-                    cartoonpm.start();
-                    cartoonDir.start(); 
-                    this.Cont_Actor_Doblaje_CN.setValue(cn.getListaDoblaje().getSize());
-                    this.Cont_Animador_CN.setValue(cn.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_CN.setValue(cn.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_CN.setValue(cn.getListaEscenario().getSize());
-                    this.Cont_Guionista_CN.setValue(cn.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_CN.setValue(cn.getListaPlotTwist().getSize());
+                    Applepm.start();
+                    AppleSuper.start(); 
+                    this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
+                    this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
+                    this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
+                    this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
+                    this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
+                    this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
                  }
-                 else if (infoestu2[0].compareTo("Nick")==0) {
+                 else if (infoestu2[0].compareTo("MSI")==0) {
                      String [] divTra=infoestu2[1].split(":");
                      divTra[1]=divTra[1].trim();
                      String [] trabajadores=divTra[1].split("\n");
@@ -825,25 +827,25 @@ public class Interface extends javax.swing.JFrame {
                          //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
                          //System.out.println(cantidad[1]);
                          if(Integer.parseInt(cantidad[1])>0) {
-                            nick.AddDeveloper(i, Integer.parseInt(cantidad[1]));
+                            MSI.AddWorker(i, Integer.parseInt(cantidad[1]));
                          }else {
                          throw new Exception("La cantidad de trabajadores no puede ser 0");
                          }
                          
                      }
-                    if(nick.getListaAnimacion().getSize()+nick.getListaDoblaje().getSize()+nick.getListaEnsamblador().getSize()+nick.getListaEscenario().getSize()+nick.getListaGuion().getSize()+nick.getListaPlotTwist().getSize()>13){
+                    if(MSI.getListMotherboard().getSize()+MSI.getListCPU().getSize()+MSI.getListRAM().getSize()+MSI.getListPowerSupply().getSize()+MSI.getListGraphic().getSize()+MSI.getListAssembler().getSize()>13){
                         throw new Exception("La cantidad de trabajadores no puede ser 0");
                     }
-                    nickpm.start();
-                    nickDir.start(); 
-                    this.Cont_Actor_Doblaje_NK.setValue(nick.getListaDoblaje().getSize());
-                    this.Cont_Animador_NK.setValue(nick.getListaAnimacion().getSize());
-                    this.Cont_Ensamblador_NK.setValue(nick.getListaEnsamblador().getSize());
-                    this.Cont_Escenario_NK.setValue(nick.getListaEscenario().getSize());
-                    this.Cont_Guionista_NK.setValue(nick.getListaGuion().getSize());
-                    this.Cont_Guionista_PW_NK.setValue(nick.getListaPlotTwist().getSize());
+                    MSIpm.start();
+                    MSISuper.start(); 
+                    this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
+                    this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
+                    this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
+                    this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
+                    this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
+                    this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
                       
-                      System.out.println("Listo nick");
+                      System.out.println("Listo MSI");
                  
                  
                  }
@@ -861,29 +863,29 @@ public class Interface extends javax.swing.JFrame {
             System.exit(0);
             }
         }
-        
+    // revisar despues
     //Aquí se crea todo el tema de la gráfica    
-    Global.addCn(0, 0);
-    Global.addNk(0, 0);
-    Global.addSeries(Global.getCn());
-    Global.addSeries(Global.getNk());
+    // Global.addCn(0, 0);
+    // Global.addNk(0, 0);
+    // Global.addSeries(Global.getCn());
+    // Global.addSeries(Global.getNk());
         
-    JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
+    //JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
         
-    final XYPlot plot = chart.getXYPlot( );
+    //final XYPlot plot = chart.getXYPlot( );
         
-    ChartPanel barPanel = new ChartPanel(chart);
+   // ChartPanel barPanel = new ChartPanel(chart);
         
-    XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
-    renderer.setSeriesPaint( 0 , Color.BLACK );
-    renderer.setSeriesPaint( 1 , Color.RED);
-    renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
-    renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
-    plot.setRenderer( renderer );
+    //XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
+   // renderer.setSeriesPaint( 0 , Color.BLACK );
+    //renderer.setSeriesPaint( 1 , Color.RED);
+    //renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
+    //renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
+    //plot.setRenderer( renderer );
 
-    panelChart.removeAll();
-    panelChart.add(barPanel);
-    panelChart.validate();
+   // panelChart.removeAll();
+    //panelChart.add(barPanel);
+    //panelChart.validate();
     
     } else {
         JOptionPane.showMessageDialog(null, "ERROR");

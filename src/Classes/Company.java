@@ -23,6 +23,7 @@ public class Company {
     private List listGraphic;
     private List listAssembler;
     private int dayDuration;
+     private int DeliveryDay;
     
     public Company(String name, int pcUntilSpecial) {
         this.name = name;
@@ -204,6 +205,14 @@ public class Company {
 
     public void setWarehouse(Warehouse warehouse) {
         this.warehouse = warehouse;
+    }
+    
+    public int getDeliveryDay() {
+        return DeliveryDay;
+    }
+
+    public void setDeliveryDay(int DeliveryDay) {
+        this.DeliveryDay = DeliveryDay;
     }
 
     public int getDayDuration() {
