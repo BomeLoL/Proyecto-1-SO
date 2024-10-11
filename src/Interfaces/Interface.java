@@ -135,7 +135,17 @@ public class Interface extends javax.swing.JFrame {
         Warehouse_Apple_PC_Special = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jLabel60 = new javax.swing.JLabel();
         jLabel44 = new javax.swing.JLabel();
+        jLabel53 = new javax.swing.JLabel();
+        jLabel47 = new javax.swing.JLabel();
+        jLabel51 = new javax.swing.JLabel();
+        jLabel59 = new javax.swing.JLabel();
+        jLabel52 = new javax.swing.JLabel();
+        jLabel48 = new javax.swing.JLabel();
+        jLabel49 = new javax.swing.JLabel();
+        jLabel45 = new javax.swing.JLabel();
+        jLabel50 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Const_ProduPlaca_MSI = new javax.swing.JSpinner();
         Const_ProduCPU_MSI = new javax.swing.JSpinner();
@@ -173,7 +183,13 @@ public class Interface extends javax.swing.JFrame {
         Warehouse_MSI_PC_Regular = new javax.swing.JLabel();
         Warehouse_MSI_PC_Special = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
+        jLabel46 = new javax.swing.JLabel();
+        jLabel58 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
+        jLabel56 = new javax.swing.JLabel();
+        jLabel54 = new javax.swing.JLabel();
+        jLabel55 = new javax.swing.JLabel();
+        jLabel57 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -181,6 +197,9 @@ public class Interface extends javax.swing.JFrame {
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         panelChart = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        jPanel10 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -258,7 +277,7 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blur.jpg"))); // NOI18N
         jLabel43.setText("jLabel43");
-        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 680, 440));
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 630, 470));
 
         jTabbedPane1.addTab("Inicio", jPanel2);
 
@@ -270,42 +289,42 @@ public class Interface extends javax.swing.JFrame {
                 Const_ProduPlaca_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_ProduPlaca_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 184, -1, -1));
+        jPanel3.add(Const_ProduPlaca_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 190, -1, -1));
 
         Const_ProduCPU_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduCPU_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 227, -1, -1));
+        jPanel3.add(Const_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 230, -1, -1));
 
         Const_ProduMemoRAM_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduMemoRAM_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_ProduMemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 268, -1, -1));
+        jPanel3.add(Const_ProduMemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 270, -1, -1));
 
         Const_ProduFuenteAlime_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduFuenteAlime_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_ProduFuenteAlime_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 318, -1, -1));
+        jPanel3.add(Const_ProduFuenteAlime_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 320, -1, -1));
 
         Const_ProduTarjegGraf_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduTarjegGraf_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_ProduTarjegGraf_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 374, -1, -1));
+        jPanel3.add(Const_ProduTarjegGraf_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 360, -1, -1));
 
         Const_Ensambladores_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_Ensambladores_AppleStateChanged(evt);
             }
         });
-        jPanel3.add(Const_Ensambladores_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 409, -1, -1));
+        jPanel3.add(Const_Ensambladores_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 410, -1, -1));
 
         Apple_Director_State.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Apple_Director_State.setText("Trabajando");
@@ -338,84 +357,121 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel11.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel11.setText("Deadline");
-        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 86, -1, -1));
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 50, -1, -1));
 
         Apple_Deadline_Counter.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         Apple_Deadline_Counter.setText("0");
-        jPanel3.add(Apple_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 86, 25, -1));
+        jPanel3.add(Apple_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 80, 25, -1));
 
         jLabel13.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel13.setText("Ganancias");
-        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 86, -1, -1));
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 50, -1, -1));
 
         Apple_Gain_Counter.setText("0");
-        jPanel3.add(Apple_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 84, 112, 18));
+        jPanel3.add(Apple_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 80, 112, 18));
 
         jLabel15.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel15.setText("Gastos");
-        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 86, -1, -1));
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 50, -1, -1));
 
         Apple_Loss_Counter.setText("0");
-        jPanel3.add(Apple_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(596, 85, 47, -1));
+        jPanel3.add(Apple_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 80, 110, -1));
 
         jLabel17.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel17.setText("Utilidad");
-        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 86, -1, -1));
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, -1));
 
         Apple_Utility_Counter.setText("0");
-        jPanel3.add(Apple_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 85, -1, -1));
+        jPanel3.add(Apple_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, -1, -1));
 
         jLabel4.setText("Productores de placa base");
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 187, -1, -1));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 190, -1, -1));
 
         jLabel6.setText("Productores de CPUs");
-        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 230, -1, -1));
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 230, -1, -1));
 
         jLabel8.setText("Productores de Memoria RAM");
-        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 271, -1, -1));
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 270, -1, -1));
 
         jLabel14.setText("Productores de Fuente de alimentación");
-        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 321, -1, -1));
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 320, -1, -1));
 
         jLabel16.setText("Productores de tarjetas gráficas");
-        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 374, -1, -1));
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 360, -1, -1));
 
         jLabel18.setText("Ensambladores");
-        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 409, -1, -1));
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 400, -1, -1));
 
         Warehouse_ProduPlacabase_Apple.setText("0");
-        jPanel3.add(Warehouse_ProduPlacabase_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 187, -1, -1));
+        jPanel3.add(Warehouse_ProduPlacabase_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 190, -1, -1));
 
         Warehouse_ProduCPU_Apple.setText("0");
-        jPanel3.add(Warehouse_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 230, -1, -1));
+        jPanel3.add(Warehouse_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 230, -1, -1));
 
         Warehouse_ProdumemoRAM_Apple.setText("0");
-        jPanel3.add(Warehouse_ProdumemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 271, -1, -1));
+        jPanel3.add(Warehouse_ProdumemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 270, -1, -1));
 
         Warehouse_FuenteAlimen_Apple.setText("0");
-        jPanel3.add(Warehouse_FuenteAlimen_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 321, -1, -1));
+        jPanel3.add(Warehouse_FuenteAlimen_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 320, -1, -1));
 
         Wrehouse_TarjeGrafi_Apple.setText("0");
-        jPanel3.add(Wrehouse_TarjeGrafi_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 377, -1, -1));
+        jPanel3.add(Wrehouse_TarjeGrafi_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 370, -1, -1));
 
         Warehouse_Apple_PC_Regular.setText("0");
-        jPanel3.add(Warehouse_Apple_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 488, -1, -1));
+        jPanel3.add(Warehouse_Apple_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 490, -1, -1));
 
         Warehouse_Apple_PC_Special.setText("0");
-        jPanel3.add(Warehouse_Apple_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 488, 14, -1));
+        jPanel3.add(Warehouse_Apple_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 490, 14, -1));
 
+        jLabel27.setFont(new java.awt.Font("AppleGothic", 3, 14)); // NOI18N
         jLabel27.setText("PC con Grafica");
-        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 465, -1, -1));
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 460, -1, -1));
 
+        jLabel28.setFont(new java.awt.Font("AppleGothic", 3, 14)); // NOI18N
         jLabel28.setText("PC Normal");
-        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(601, 465, -1, -1));
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 460, 80, -1));
+
+        jLabel60.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/image-removebg-preview.png"))); // NOI18N
+        jLabel60.setText("jLabel59");
+        jPanel3.add(jLabel60, new org.netbeans.lib.awtextra.AbsoluteConstraints(-270, 0, 460, 220));
 
         jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img3.jpg"))); // NOI18N
         jLabel44.setText("jLabel44");
-        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 90, 730, 460));
+        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-280, 90, 740, 460));
+
+        jLabel53.setText("/10");
+        jPanel3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 370, -1, -1));
+
+        jLabel47.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/apleeeeee.jpg"))); // NOI18N
+        jLabel47.setText("jLabel47");
+        jPanel3.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 550, 260));
+
+        jLabel51.setText("/55");
+        jPanel3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 270, -1, -1));
+
+        jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/image-removebg-preview.png"))); // NOI18N
+        jLabel59.setText("jLabel59");
+        jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, 450, 220));
+
+        jLabel52.setText("/35");
+        jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 320, -1, -1));
+
+        jLabel48.setText("/25");
+        jPanel3.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 190, -1, -1));
+
+        jLabel49.setText("/20");
+        jPanel3.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 230, -1, -1));
+
+        jLabel45.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img3.jpg"))); // NOI18N
+        jLabel45.setText("jLabel45");
+        jPanel3.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 130, 760, 420));
+
+        jLabel50.setText("/20");
+        jPanel3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(940, 230, -1, -1));
 
         jTabbedPane1.addTab("Apple", jPanel3);
 
+        jPanel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Const_ProduPlaca_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
@@ -423,73 +479,73 @@ public class Interface extends javax.swing.JFrame {
                 Const_ProduPlaca_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_ProduPlaca_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 208, -1, -1));
+        jPanel4.add(Const_ProduPlaca_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 210, -1, -1));
 
         Const_ProduCPU_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduCPU_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 249, -1, -1));
+        jPanel4.add(Const_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 260, -1, -1));
 
         Const_ProduMemoRAM_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduMemoRAM_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_ProduMemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 290, -1, -1));
+        jPanel4.add(Const_ProduMemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 300, -1, -1));
 
         Const_ProduFuenteAlime_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduFuenteAlime_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_ProduFuenteAlime_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 331, -1, -1));
+        jPanel4.add(Const_ProduFuenteAlime_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 340, -1, -1));
 
         Const_ProduTarjegGraf_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduTarjegGraf_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_ProduTarjegGraf_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 372, -1, -1));
+        jPanel4.add(Const_ProduTarjegGraf_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 380, -1, -1));
 
         Const_Ensambladores_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_Ensambladores_MSIStateChanged(evt);
             }
         });
-        jPanel4.add(Const_Ensambladores_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 413, -1, -1));
+        jPanel4.add(Const_Ensambladores_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 420, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel12.setText("Deadline");
-        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 86, -1, -1));
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 40, -1, -1));
 
         MSI_Deadline_Counter.setText("0");
-        jPanel4.add(MSI_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 85, -1, -1));
+        jPanel4.add(MSI_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 70, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel20.setText("Ganancias");
-        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 86, -1, -1));
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 40, -1, -1));
 
         MSI_Gain_Counter.setText("0");
-        jPanel4.add(MSI_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 85, -1, -1));
+        jPanel4.add(MSI_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 70, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel22.setText("Gastos");
-        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 86, -1, -1));
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 50, -1, -1));
 
         MSI_Loss_Counter.setText("0");
-        jPanel4.add(MSI_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 85, 67, -1));
+        jPanel4.add(MSI_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 80, 67, -1));
 
         jLabel24.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel24.setText("Utilidad");
-        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(684, 86, -1, -1));
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 50, -1, -1));
 
         MSI_Utility_Counter.setText("0");
-        jPanel4.add(MSI_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(937, 85, -1, -1));
+        jPanel4.add(MSI_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(840, 80, -1, -1));
 
         jLabel19.setText("Director");
-        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 201, -1, -1));
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 200, -1, -1));
 
         jLabel26.setText("Project Manager");
         jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 258, -1, -1));
@@ -502,7 +558,7 @@ public class Interface extends javax.swing.JFrame {
         jPanel4.add(MSI_pm_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 258, -1, -1));
 
         jLabel29.setText("Faltas (PM)");
-        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 316, -1, -1));
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 320, -1, -1));
 
         MSI_Fail_Counter.setText("0");
         jPanel4.add(MSI_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 316, -1, -1));
@@ -514,57 +570,80 @@ public class Interface extends javax.swing.JFrame {
         jPanel4.add(MSI_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 371, -1, -1));
 
         jLabel21.setText("Productores de placa base");
-        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 211, -1, -1));
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 210, -1, -1));
 
         jLabel23.setText("Productores de CPUs");
-        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 252, -1, -1));
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 260, -1, -1));
 
         jLabel25.setText("Productores de Memoria RAM");
-        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 293, -1, -1));
+        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 300, -1, -1));
 
         jLabel30.setText("Productores de Fuente de alimentación");
-        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 334, -1, -1));
+        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 340, -1, -1));
 
         jLabel32.setText("Productores de tarjetas gráficas");
-        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 375, -1, -1));
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 380, -1, -1));
 
         jLabel33.setText("Ensambladores");
-        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 416, -1, -1));
+        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 420, -1, -1));
 
         Warehouse_ProduPlacabase_MSI.setText("0");
-        jPanel4.add(Warehouse_ProduPlacabase_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 211, -1, -1));
+        jPanel4.add(Warehouse_ProduPlacabase_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 210, -1, -1));
 
         Warehouse_ProduCPU_MSI.setText("0");
-        jPanel4.add(Warehouse_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 252, -1, -1));
+        jPanel4.add(Warehouse_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 260, -1, -1));
 
         Warehouse_ProdumemoRAM_MSI.setText("0");
-        jPanel4.add(Warehouse_ProdumemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 293, -1, -1));
+        jPanel4.add(Warehouse_ProdumemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 300, -1, -1));
 
         Warehouse_FuenteAlimen_MSI.setText("0");
-        jPanel4.add(Warehouse_FuenteAlimen_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 334, -1, -1));
+        jPanel4.add(Warehouse_FuenteAlimen_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 340, -1, -1));
 
         Wrehouse_TarjeGrafi_MSI.setText("0");
-        jPanel4.add(Wrehouse_TarjeGrafi_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 375, -1, -1));
+        jPanel4.add(Wrehouse_TarjeGrafi_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 380, -1, -1));
 
         Warehouse_MSI_PC_Regular.setText("0");
-        jPanel4.add(Warehouse_MSI_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 482, -1, -1));
+        jPanel4.add(Warehouse_MSI_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 500, -1, -1));
 
         Warehouse_MSI_PC_Special.setText("0");
-        jPanel4.add(Warehouse_MSI_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 478, 23, 25));
+        jPanel4.add(Warehouse_MSI_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 500, 23, 25));
 
         jLabel38.setText("PC Normal");
-        jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 455, -1, -1));
+        jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
+
+        jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/fuego.png"))); // NOI18N
+        jLabel46.setText("jLabel46");
+        jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(-240, 420, 420, 160));
+
+        jLabel58.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/yuuuu.png"))); // NOI18N
+        jPanel4.add(jLabel58, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 0, 420, 200));
 
         jLabel39.setText("PC con Grafica");
-        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(856, 455, -1, -1));
+        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 470, -1, -1));
+
+        jLabel56.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blurrrmsi.jpg"))); // NOI18N
+        jLabel56.setText("jLabel56");
+        jPanel4.add(jLabel56, new org.netbeans.lib.awtextra.AbsoluteConstraints(-230, 100, 690, 440));
+
+        jLabel54.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/msiiii.jpg"))); // NOI18N
+        jLabel54.setText("jLabel54");
+        jPanel4.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, 570, 230));
+
+        jLabel55.setText("jLabel55");
+        jPanel4.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
+
+        jLabel57.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blurrrmsi.jpg"))); // NOI18N
+        jLabel57.setText("jLabel57");
+        jPanel4.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 730, 450));
 
         jTabbedPane1.addTab("MSI", jPanel4);
 
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
         jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("AppleGothic", 1, 36)); // NOI18N
         jLabel1.setText("Gráfico");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 40, -1, -1));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel2.setText("MSI");
@@ -593,23 +672,56 @@ public class Interface extends javax.swing.JFrame {
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 69, -1, -1));
 
-        javax.swing.GroupLayout panelChartLayout = new javax.swing.GroupLayout(panelChart);
-        panelChart.setLayout(panelChartLayout);
-        panelChartLayout.setHorizontalGroup(
-            panelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 869, Short.MAX_VALUE)
-        );
-        panelChartLayout.setVerticalGroup(
-            panelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 387, Short.MAX_VALUE)
-        );
-
-        jPanel5.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 113, -1, -1));
+        panelChart.setLayout(new java.awt.BorderLayout());
+        jPanel5.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 113, 920, 420));
         panelChart.setBackground(new java.awt.Color(204, 204, 204));
 
         panelChart.setForeground(new java.awt.Color(255, 255, 255));
 
         // Code of sub-components and layout - not shown here
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel5.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 40, -1, -1));
+
+        jPanel9.setBackground(new java.awt.Color(255, 0, 0));
+
+        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
+        jPanel9.setLayout(jPanel9Layout);
+        jPanel9Layout.setHorizontalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel9Layout.setVerticalGroup(
+            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel5.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, -1, -1));
+
+        jPanel10.setBackground(new java.awt.Color(102, 255, 102));
+
+        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
+        jPanel10.setLayout(jPanel10Layout);
+        jPanel10Layout.setHorizontalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        jPanel10Layout.setVerticalGroup(
+            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        jPanel5.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, 20, 20));
 
         jTabbedPane1.addTab("Gráfico", jPanel5);
 
@@ -2240,18 +2352,37 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel42;
     private javax.swing.JLabel jLabel43;
     private javax.swing.JLabel jLabel44;
+    private javax.swing.JLabel jLabel45;
+    private javax.swing.JLabel jLabel46;
+    private javax.swing.JLabel jLabel47;
+    private javax.swing.JLabel jLabel48;
+    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel50;
+    private javax.swing.JLabel jLabel51;
+    private javax.swing.JLabel jLabel52;
+    private javax.swing.JLabel jLabel53;
+    private javax.swing.JLabel jLabel54;
+    private javax.swing.JLabel jLabel55;
+    private javax.swing.JLabel jLabel56;
+    private javax.swing.JLabel jLabel57;
+    private javax.swing.JLabel jLabel58;
+    private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private static javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JPanel panelChart;
     private javax.swing.JButton saveButtonActionPerformed;
