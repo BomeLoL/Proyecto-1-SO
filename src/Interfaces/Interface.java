@@ -183,6 +183,11 @@ public class Interface extends javax.swing.JFrame {
         Warehouse_MSI_PC_Regular = new javax.swing.JLabel();
         Warehouse_MSI_PC_Special = new javax.swing.JLabel();
         jLabel38 = new javax.swing.JLabel();
+        jLabel61 = new javax.swing.JLabel();
+        jLabel62 = new javax.swing.JLabel();
+        jLabel63 = new javax.swing.JLabel();
+        jLabel64 = new javax.swing.JLabel();
+        jLabel65 = new javax.swing.JLabel();
         jLabel46 = new javax.swing.JLabel();
         jLabel58 = new javax.swing.JLabel();
         jLabel39 = new javax.swing.JLabel();
@@ -220,7 +225,7 @@ public class Interface extends javax.swing.JFrame {
                 saveButtonActionPerformedActionPerformed(evt);
             }
         });
-        jPanel2.add(saveButtonActionPerformed, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 212, -1));
+        jPanel2.add(saveButtonActionPerformed, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 212, -1));
 
         jButton3.setBackground(new java.awt.Color(204, 204, 204));
         jButton3.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
@@ -231,53 +236,53 @@ public class Interface extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 82, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 430, 82, -1));
 
         Cont_Deadline.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Cont_DeadlineStateChanged(evt);
             }
         });
-        jPanel2.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
+        jPanel2.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 340, -1, -1));
 
         Cont_Day_Duration.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Cont_Day_DurationStateChanged(evt);
             }
         });
-        jPanel2.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, -1, -1));
+        jPanel2.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 330, -1, -1));
 
         jLabel34.setFont(new java.awt.Font("AppleGothic", 0, 18)); // NOI18N
         jLabel34.setText("Deadline");
-        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
+        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 270, -1, -1));
 
         jLabel35.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel35.setText("Duracion del día");
-        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, -1, -1));
+        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 270, -1, -1));
 
         jLabel36.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel36.setText("milisegundos");
-        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, -1, -1));
+        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 340, -1, -1));
 
         jLabel37.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel37.setText("dias");
-        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 340, -1, -1));
 
         jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Deco.png"))); // NOI18N
         jLabel41.setText("jLabel41");
-        jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 450, 230));
+        jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 450, 230));
 
         jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img2.png"))); // NOI18N
         jLabel42.setText("jLabel42");
-        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 550, 290));
+        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 0, 550, 290));
 
-        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Sin título (968 x 549 px) (978 x 549 px) (978 x 549 px) (300 x 200 px) (978 x 549 px)-2.jpg"))); // NOI18N
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Copia de fondito.jpg"))); // NOI18N
         jLabel40.setText("jLabel40");
-        jPanel2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(-440, 10, 770, 510));
+        jPanel2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(-300, -30, 820, 600));
 
         jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blur.jpg"))); // NOI18N
         jLabel43.setText("jLabel43");
-        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 80, 630, 470));
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, 630, 470));
 
         jTabbedPane1.addTab("Inicio", jPanel2);
 
@@ -451,7 +456,7 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel59.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/image-removebg-preview.png"))); // NOI18N
         jLabel59.setText("jLabel59");
-        jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, 450, 220));
+        jPanel3.add(jLabel59, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 360, 450, 220));
 
         jLabel52.setText("/35");
         jPanel3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 320, -1, -1));
@@ -611,6 +616,21 @@ public class Interface extends javax.swing.JFrame {
         jLabel38.setText("PC Normal");
         jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
 
+        jLabel61.setText("/25");
+        jPanel4.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 210, -1, -1));
+
+        jLabel62.setText("/20");
+        jPanel4.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 260, -1, -1));
+
+        jLabel63.setText("/55");
+        jPanel4.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 300, -1, -1));
+
+        jLabel64.setText("/35");
+        jPanel4.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 340, -1, -1));
+
+        jLabel65.setText("/10");
+        jPanel4.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 380, -1, -1));
+
         jLabel46.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Interfaces/fuego.png"))); // NOI18N
         jLabel46.setText("jLabel46");
         jPanel4.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(-240, 420, 420, 160));
@@ -643,15 +663,15 @@ public class Interface extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("AppleGothic", 1, 36)); // NOI18N
         jLabel1.setText("Gráfico");
-        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, -1, -1));
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel2.setText("MSI");
-        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 40, -1, -1));
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 30, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel3.setText("Apple");
-        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 69, -1, -1));
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(980, 70, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(255, 0, 0));
 
@@ -666,14 +686,14 @@ public class Interface extends javax.swing.JFrame {
             .addGap(0, 22, Short.MAX_VALUE)
         );
 
-        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 35, -1, -1));
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 30, -1, -1));
 
         jPanel7.setBackground(new java.awt.Color(115, 185, 123));
         jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
         jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 69, -1, -1));
 
         panelChart.setLayout(new java.awt.BorderLayout());
-        jPanel5.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(34, 113, 920, 420));
+        jPanel5.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 130, 1090, 420));
         panelChart.setBackground(new java.awt.Color(204, 204, 204));
 
         panelChart.setForeground(new java.awt.Color(255, 255, 255));
@@ -721,7 +741,7 @@ public class Interface extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jPanel5.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 70, 20, 20));
+        jPanel5.add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 70, 20, 20));
 
         jTabbedPane1.addTab("Gráfico", jPanel5);
 
@@ -740,320 +760,6 @@ public class Interface extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void saveButtonActionPerformedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformedActionPerformed
-        // TODO add your handling code here:
-        
-          if(iniciado == true){
-            //Apple
-            int placaApple=(int) this.Const_ProduPlaca_Apple.getValue();
-            int cpuApple=(int) this.Const_ProduCPU_Apple.getValue();
-            int ramApple=(int) this.Const_ProduMemoRAM_Apple.getValue();
-            int fuenteAlimeApple=(int) this.Const_ProduFuenteAlime_Apple.getValue();
-            int tarjeGrafApple=(int) this.Const_ProduTarjegGraf_Apple.getValue();
-            int EnsambladoresApple=(int) this.Const_Ensambladores_Apple.getValue();
-            //MSI
-             int placaMSI=(int) this.Const_ProduPlaca_MSI.getValue();
-            int cpuMSI=(int) this.Const_ProduCPU_MSI.getValue();
-            int ramMSI=(int) this.Const_ProduMemoRAM_MSI.getValue();
-            int fuenteAlimeMSI=(int) this.Const_ProduFuenteAlime_MSI.getValue();
-            int tarjeGrafMSI=(int) this.Const_ProduTarjegGraf_MSI.getValue();
-            int EnsambladoresMSI=(int) this.Const_Ensambladores_MSI.getValue();
-            
-            int deadline=(int) this.Cont_Deadline.getValue();
-            int DuracionD=(int) this.Cont_Day_Duration.getValue();
-          
-            
-             String TodoTXT="Duracion\n"+DuracionD+";\nDeadline\n"+deadline+";\nApple-\nTrabajadores:\nProductoresPlaca,"+placaApple+
-                    "\ncpu,"+cpuApple+"\nram,"+ramApple+"\nFuenteAlimentacion,"+fuenteAlimeApple+"\nTarjetagrafica,"+tarjeGrafApple+"\nensambladores,"+EnsambladoresApple+";\n"
-                    + "MSI-\nTrabajadores:\nProductoresPlaca,"+placaMSI+
-                    "\ncpu,"+cpuMSI+"\nram,"+ramMSI+"\nFuenteAlimentacion,"+fuenteAlimeMSI+"\nTarjetagrafica,"+tarjeGrafMSI+"\nensambladores,"+EnsambladoresMSI;
-            
-//            System.out.println(TodoTXT);
-            
-            try {
-            if(getPath()!=null) {
-            PrintWriter pw=new PrintWriter(getPath());
-            pw.print(TodoTXT);
-            pw.close();
-            JOptionPane.showMessageDialog(null, "Guardado exitoso");
-            System.exit(0);
-            }
-            else{JOptionPane.showMessageDialog(null, "Error!! Primero debe cargar un archivo txt");}
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Error!!!!!");
-            System.exit(0);
-        } 
-        
-        }else{
-            JOptionPane.showMessageDialog(null,"La simulación no ha empezado todavía, no se puede guardar");
-        }
-                                              
-        
-    }//GEN-LAST:event_saveButtonActionPerformedActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-                // TODO add your handling code here:
-        
-        //    //se lee el txt
-    if (iniciado==false){
-        iniciado=true;
-    JFileChooser file = new JFileChooser();
-    FileNameExtensionFilter filter = new FileNameExtensionFilter(".TXT","txt");
-    file.setFileSelectionMode(JFileChooser.FILES_ONLY);
-    file.setFileFilter(filter);
-    int selection=file.showOpenDialog(this);
-    
-    if(selection==JFileChooser.APPROVE_OPTION) {
-        File archive=file.getSelectedFile(); 
-        String path=archive.getAbsolutePath();
-        setPath(path);
-    
-        if(!path.contains("txt")) {
-        JOptionPane.showMessageDialog(null, "Por favor elija un archivo del tipo txt");
-        }
-        else {
-        try{
-            File archivo = new File (path);
-            FileReader fr = new FileReader(archivo); 
-            BufferedReader br = new BufferedReader(fr); 
-                 
-            String cadena;
-            String complete=""; 
-      
-            while ((cadena=br.readLine())!=null) { //lee hasta llegar a null que significa que se acabo el archivo
-
-                if(!cadena.isEmpty()&& !cadena.isBlank()) { //revisa que la linea no sea vacia/que el tamaño de la cadena sea 0
-                    complete+=cadena+"\n";
-                }
-            }
-                
-            fr.close();
-            br.close();
-            complete=complete.trim(); //quita linea en blanco al final
-            //el !"".equals es para verificar que el string no sea solo un espacio en blanco
-            if(!"".equals(complete)) {
-                String[] info;
-                String [] todo=complete.split(";");
-                String [] Dias=todo[0].split("\n");
-                int duracionDias=Integer.parseInt(Dias[1]);
-                if(duracionDias<=0) {
-                    throw new Exception("La duracion del dia no puede ser 0");
-                }
-                this.Cont_Day_Duration.setValue(duracionDias);
-                //System.out.println(duracionDias); //todo bien aqui
-                String[] Diasdead=todo[1].split("\n");
-                //System.out.println(Diasdead[1]);
-                int Deadline=Integer.parseInt(Diasdead[2]);
-                if(Deadline<=0) {
-                    throw new Exception("El tiempo de entrega no puede ser 0");
-                }
-                this.Cont_Deadline.setValue(Deadline);
-                getApple_Deadline_Counter().setText(Integer.toString(Deadline));
-                getMSI_Deadline_Counter().setText(Integer.toString(Deadline));
-                
-                //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
-                MSI.setDayDuration(duracionDias);
-                Apple.setDayDuration(duracionDias);
-                MSI.setDeliveryDay(Deadline);
-                Apple.setDeliveryDay(Deadline);
-                
-                MSI.getWarehouse().setDeadlineCounter(Deadline);
-                MSI.getWarehouse().setDeadline(Deadline);
-                
-                Apple.getWarehouse().setDeadlineCounter(Deadline);
-                Apple.getWarehouse().setDeadline(Deadline);
-                
-                ProjectManager MSIpm=new ProjectManager(40,duracionDias,Global.getMutexMSI(),MSI.getWarehouse());
-                Supervisor MSISuper = new Supervisor(60,Global.getMutexMSI(),duracionDias,MSI.getWarehouse(), MSIpm);
-                ProjectManager Applepm=new ProjectManager(40,duracionDias,Global. getMutexApple(),Apple.getWarehouse());
-                Supervisor AppleSuper = new Supervisor(60,Global.getMutexApple(),duracionDias,Apple.getWarehouse(),Applepm) ;
-                
-               //todo2 tiene cosas de cartoon
-                todo[2]=todo[2].trim();
-                String [] infoestu1=todo[2].split("-");
-                //todo3 tiene cosas de nick
-                todo[3]=todo[3].trim();
-                String [] infoestu2=todo[3].split("-");
-                
-                if (infoestu1[0].compareTo("Apple")==0) { //el if es porsia 
-//                     System.out.println("jajajaj "+infoestu1[0]);
-//                     System.out.println(infoestu1[1]);
-                     infoestu1[1]=infoestu1[1].trim();
-                     String [] divTra=infoestu1[1].split(":");
-                     divTra[1]=divTra[1].trim();
-                     String [] trabajadores=divTra[1].split("\n");
-                     
-                     for (int i = 0; i < trabajadores.length; i++) {
-                         //System.out.println(i+" "+trabajadores[i]);
-                         String [] cantidad=trabajadores[i].split(",");
-                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
-                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
-                         //System.out.println(cantidad[1]);
-                         if(Integer.parseInt(cantidad[1])>0) {
-                            Apple.AddWorker(i,Integer.parseInt(cantidad[1]));
-                         }else {
-                         throw new Exception("La cantidad de trabajadores no puede ser 0");
-                         }
-                         
-                     }
-                    if(Apple.getListMotherboard().getSize()+Apple.getListCPU().getSize()+Apple.getListRAM().getSize()+Apple.getListPowerSupply().getSize()+Apple.getListGraphic().getSize()+Apple.getListAssembler().getSize()>13){
-                        throw new Exception("La cantidad de trabajadores no puede ser 0");
-                    }
-                    Applepm.start();
-                    AppleSuper.start();
-                    System.out.println("Listo apple");
-                    this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
-                    this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
-                    this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
-                    this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
-                    this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
-                    this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
-                 
-                 }
-                 else if (infoestu1[0].compareTo("MSI")==0) {
-                     infoestu1[1]=infoestu1[1].trim();
-                     String [] divTra=infoestu1[1].split(":");
-                     divTra[1]=divTra[1].trim();
-                     String [] trabajadores=divTra[1].split("\n");
-                     
-                     for (int i = 0; i < trabajadores.length; i++) {
-                         //System.out.println(i+" "+trabajadores[i]);
-                         String [] cantidad=trabajadores[i].split(",");
-                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
-                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
-                         //System.out.println(cantidad[1]);
-                         if(Integer.parseInt(cantidad[1])>0) {
-                            MSI.AddWorker(i,Integer.parseInt(cantidad[1]));
-                         } else {
-                         throw new Exception("La cantidad de trabajadores no puede ser 0");
-                         }
-                         
-                    }
-                    MSIpm.start();
-                    MSISuper.start(); 
-                    this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
-                    this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
-                    this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
-                    this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
-                    this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
-                    this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
-                    
-                 }
-                 
-                 if (infoestu2[0].compareTo("Apple")==0) {
-//                     System.out.println("jejejeje "+infoestu2[0]);
-//                     System.out.println(infoestu2[1]);
-                     infoestu1[1]=infoestu1[1].trim();
-                     String [] divTra=infoestu1[1].split(":");
-                     divTra[1]=divTra[1].trim();
-                     String [] trabajadores=divTra[1].split("\n");
-                     
-                     for (int i = 0; i < trabajadores.length; i++) {
-                         //System.out.println(i+" "+trabajadores[i]);
-                         String [] cantidad=trabajadores[i].split(",");
-                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
-                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
-                         //System.out.println(cantidad[1]);
-                         if(Integer.parseInt(cantidad[1])>0) { 
-                         Apple.AddWorker(i, Integer.parseInt(cantidad[1]));
-                        }else {
-                         throw new Exception("La cantidad de trabajadores no puede ser 0");
-                         }
-                         
-                     }
-                    Applepm.start();
-                    AppleSuper.start(); 
-                    this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
-                    this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
-                    this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
-                    this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
-                    this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
-                    this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
-                 }
-                 else if (infoestu2[0].compareTo("MSI")==0) {
-                     String [] divTra=infoestu2[1].split(":");
-                     divTra[1]=divTra[1].trim();
-                     String [] trabajadores=divTra[1].split("\n");
-                     System.out.println(infoestu2[0]);
-                     for (int i = 0; i < trabajadores.length; i++) {
-                         //System.out.println(i+" "+trabajadores[i]);
-                         String [] cantidad=trabajadores[i].split(",");
-                         //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
-                         //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
-                         //System.out.println(cantidad[1]);
-                         if(Integer.parseInt(cantidad[1])>0) {
-                            MSI.AddWorker(i, Integer.parseInt(cantidad[1]));
-                         }else {
-                         throw new Exception("La cantidad de trabajadores no puede ser 0");
-                         }
-                         
-                     }
-                    if(MSI.getListMotherboard().getSize()+MSI.getListCPU().getSize()+MSI.getListRAM().getSize()+MSI.getListPowerSupply().getSize()+MSI.getListGraphic().getSize()+MSI.getListAssembler().getSize()>15){
-                        throw new Exception("La cantidad de trabajadores no puede ser 0");
-                    }
-                    MSIpm.start();
-                    MSISuper.start(); 
-                    this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
-                    this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
-                    this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
-                    this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
-                    this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
-                    this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
-                      
-                      System.out.println("Listo MSI");
-                 
-                 
-                 }
-                 
-                
-//                for (int i = 0; i < todo.length; i++) {
-//                  System.out.println(todo[i]);  
-//                }
-                
-            
-            }
-                
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Erorr!!!! Asegurate de haber cargado el archivo correcto");
-            System.exit(0);
-            }
-        }
-    // revisar despues
-    //Aquí se crea todo el tema de la gráfica    
-     Global.addApple(0, 0);
-     Global.addMSI(0, 0);
-     Global.addSeries(Global.getApple());
-     Global.addSeries(Global.getMSI());
-        
-    JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
-        
-    final XYPlot plot = chart.getXYPlot( );
-        
-    ChartPanel barPanel = new ChartPanel(chart);
-        
-    XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
-    renderer.setSeriesPaint( 0 , Color.GREEN );
-    renderer.setSeriesPaint( 1 , Color.RED);
-    renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
-    renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
-    plot.setRenderer( renderer );
-
-    panelChart.removeAll();
-    panelChart.add(barPanel);
-    panelChart.validate();
-    
-    } else {
-        JOptionPane.showMessageDialog(null, "ERROR");
-        System.exit(0);
-    }
-    } else{
-        JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
-    }
-
-
-                                  
-    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void Const_ProduPlaca_AppleStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Const_ProduPlaca_AppleStateChanged
         if(iniciado == true){
@@ -1475,6 +1181,19 @@ public class Interface extends javax.swing.JFrame {
 
     }//GEN-LAST:event_Const_Ensambladores_MSIStateChanged
 
+    private void Cont_Day_DurationStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Day_DurationStateChanged
+        // TODO add your handling code here:
+        if(iniciado == true){
+            if((int)this.Cont_Day_Duration.getValue() <= 0){
+                this.Cont_Day_Duration.setValue(1);
+                this.repaint();
+            }
+        }else{
+            this.Cont_Day_Duration.setValue(1);
+            this.repaint();
+        }
+    }//GEN-LAST:event_Cont_Day_DurationStateChanged
+
     private void Cont_DeadlineStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_DeadlineStateChanged
         if(iniciado == true){
             if((int)this.Cont_Deadline.getValue() <= 0){
@@ -1488,18 +1207,312 @@ public class Interface extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_Cont_DeadlineStateChanged
 
-    private void Cont_Day_DurationStateChanged(javax.swing.event.ChangeEvent evt) {//GEN-FIRST:event_Cont_Day_DurationStateChanged
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
-                if(iniciado == true){
-            if((int)this.Cont_Day_Duration.getValue() <= 0){
-                this.Cont_Day_Duration.setValue(1);
-                this.repaint();
+
+        //    //se lee el txt
+        if (iniciado==false){
+            iniciado=true;
+            JFileChooser file = new JFileChooser();
+            FileNameExtensionFilter filter = new FileNameExtensionFilter(".TXT","txt");
+            file.setFileSelectionMode(JFileChooser.FILES_ONLY);
+            file.setFileFilter(filter);
+            int selection=file.showOpenDialog(this);
+
+            if(selection==JFileChooser.APPROVE_OPTION) {
+                File archive=file.getSelectedFile();
+                String path=archive.getAbsolutePath();
+                setPath(path);
+
+                if(!path.contains("txt")) {
+                    JOptionPane.showMessageDialog(null, "Por favor elija un archivo del tipo txt");
+                }
+                else {
+                    try{
+                        File archivo = new File (path);
+                        FileReader fr = new FileReader(archivo);
+                        BufferedReader br = new BufferedReader(fr);
+
+                        String cadena;
+                        String complete="";
+
+                        while ((cadena=br.readLine())!=null) { //lee hasta llegar a null que significa que se acabo el archivo
+
+                            if(!cadena.isEmpty()&& !cadena.isBlank()) { //revisa que la linea no sea vacia/que el tamaño de la cadena sea 0
+                                complete+=cadena+"\n";
+                            }
+                        }
+
+                        fr.close();
+                        br.close();
+                        complete=complete.trim(); //quita linea en blanco al final
+                        //el !"".equals es para verificar que el string no sea solo un espacio en blanco
+                        if(!"".equals(complete)) {
+                            String[] info;
+                            String [] todo=complete.split(";");
+                            String [] Dias=todo[0].split("\n");
+                            int duracionDias=Integer.parseInt(Dias[1]);
+                            if(duracionDias<=0) {
+                                throw new Exception("La duracion del dia no puede ser 0");
+                            }
+                            this.Cont_Day_Duration.setValue(duracionDias);
+                            //System.out.println(duracionDias); //todo bien aqui
+                            String[] Diasdead=todo[1].split("\n");
+                            //System.out.println(Diasdead[1]);
+                            int Deadline=Integer.parseInt(Diasdead[2]);
+                            if(Deadline<=0) {
+                                throw new Exception("El tiempo de entrega no puede ser 0");
+                            }
+                            this.Cont_Deadline.setValue(Deadline);
+                            getApple_Deadline_Counter().setText(Integer.toString(Deadline));
+                            getMSI_Deadline_Counter().setText(Integer.toString(Deadline));
+
+                            //ya tengo la duracion del dia y la deadline se crean/agregan las cosas
+                            MSI.setDayDuration(duracionDias);
+                            Apple.setDayDuration(duracionDias);
+                            MSI.setDeliveryDay(Deadline);
+                            Apple.setDeliveryDay(Deadline);
+
+                            MSI.getWarehouse().setDeadlineCounter(Deadline);
+                            MSI.getWarehouse().setDeadline(Deadline);
+
+                            Apple.getWarehouse().setDeadlineCounter(Deadline);
+                            Apple.getWarehouse().setDeadline(Deadline);
+
+                            ProjectManager MSIpm=new ProjectManager(40,duracionDias,Global.getMutexMSI(),MSI.getWarehouse());
+                            Supervisor MSISuper = new Supervisor(60,Global.getMutexMSI(),duracionDias,MSI.getWarehouse(), MSIpm);
+                            ProjectManager Applepm=new ProjectManager(40,duracionDias,Global. getMutexApple(),Apple.getWarehouse());
+                            Supervisor AppleSuper = new Supervisor(60,Global.getMutexApple(),duracionDias,Apple.getWarehouse(),Applepm) ;
+
+                            //todo2 tiene cosas de cartoon
+                            todo[2]=todo[2].trim();
+                            String [] infoestu1=todo[2].split("-");
+                            //todo3 tiene cosas de nick
+                            todo[3]=todo[3].trim();
+                            String [] infoestu2=todo[3].split("-");
+
+                            if (infoestu1[0].compareTo("Apple")==0) { //el if es porsia
+                                //                     System.out.println("jajajaj "+infoestu1[0]);
+                                //                     System.out.println(infoestu1[1]);
+                                infoestu1[1]=infoestu1[1].trim();
+                                String [] divTra=infoestu1[1].split(":");
+                                divTra[1]=divTra[1].trim();
+                                String [] trabajadores=divTra[1].split("\n");
+
+                                for (int i = 0; i < trabajadores.length; i++) {
+                                    //System.out.println(i+" "+trabajadores[i]);
+                                    String [] cantidad=trabajadores[i].split(",");
+                                    //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                                    //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                                    //System.out.println(cantidad[1]);
+                                    if(Integer.parseInt(cantidad[1])>0) {
+                                        Apple.AddWorker(i,Integer.parseInt(cantidad[1]));
+                                    }else {
+                                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                    }
+
+                                }
+                                if(Apple.getListMotherboard().getSize()+Apple.getListCPU().getSize()+Apple.getListRAM().getSize()+Apple.getListPowerSupply().getSize()+Apple.getListGraphic().getSize()+Apple.getListAssembler().getSize()>13){
+                                    throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                }
+                                Applepm.start();
+                                AppleSuper.start();
+                                System.out.println("Listo apple");
+                                this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
+                                this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
+                                this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
+                                this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
+                                this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
+                                this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
+
+                            }
+                            else if (infoestu1[0].compareTo("MSI")==0) {
+                                infoestu1[1]=infoestu1[1].trim();
+                                String [] divTra=infoestu1[1].split(":");
+                                divTra[1]=divTra[1].trim();
+                                String [] trabajadores=divTra[1].split("\n");
+
+                                for (int i = 0; i < trabajadores.length; i++) {
+                                    //System.out.println(i+" "+trabajadores[i]);
+                                    String [] cantidad=trabajadores[i].split(",");
+                                    //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                                    //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                                    //System.out.println(cantidad[1]);
+                                    if(Integer.parseInt(cantidad[1])>0) {
+                                        MSI.AddWorker(i,Integer.parseInt(cantidad[1]));
+                                    } else {
+                                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                    }
+
+                                }
+                                MSIpm.start();
+                                MSISuper.start();
+                                this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
+                                this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
+                                this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
+                                this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
+                                this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
+                                this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
+
+                            }
+
+                            if (infoestu2[0].compareTo("Apple")==0) {
+                                //                     System.out.println("jejejeje "+infoestu2[0]);
+                                //                     System.out.println(infoestu2[1]);
+                                infoestu1[1]=infoestu1[1].trim();
+                                String [] divTra=infoestu1[1].split(":");
+                                divTra[1]=divTra[1].trim();
+                                String [] trabajadores=divTra[1].split("\n");
+
+                                for (int i = 0; i < trabajadores.length; i++) {
+                                    //System.out.println(i+" "+trabajadores[i]);
+                                    String [] cantidad=trabajadores[i].split(",");
+                                    //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                                    //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                                    //System.out.println(cantidad[1]);
+                                    if(Integer.parseInt(cantidad[1])>0) {
+                                        Apple.AddWorker(i, Integer.parseInt(cantidad[1]));
+                                    }else {
+                                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                    }
+
+                                }
+                                Applepm.start();
+                                AppleSuper.start();
+                                this.Const_ProduPlaca_Apple.setValue(Apple.getListMotherboard().getSize());
+                                this.Const_ProduCPU_Apple.setValue(Apple.getListCPU().getSize());
+                                this.Const_ProduMemoRAM_Apple.setValue(Apple.getListRAM().getSize());
+                                this.Const_ProduFuenteAlime_Apple.setValue(Apple.getListPowerSupply().getSize());
+                                this.Const_ProduTarjegGraf_Apple.setValue(Apple.getListGraphic().getSize());
+                                this.Const_Ensambladores_Apple.setValue(Apple.getListAssembler().getSize());
+                            }
+                            else if (infoestu2[0].compareTo("MSI")==0) {
+                                String [] divTra=infoestu2[1].split(":");
+                                divTra[1]=divTra[1].trim();
+                                String [] trabajadores=divTra[1].split("\n");
+                                System.out.println(infoestu2[0]);
+                                for (int i = 0; i < trabajadores.length; i++) {
+                                    //System.out.println(i+" "+trabajadores[i]);
+                                    String [] cantidad=trabajadores[i].split(",");
+                                    //cantidad[0] debe tener el nombre del trabajador y el [1] la cantidad de ese tipo
+                                    //cuando se vaya a crear el dev le paso i que seria el tipo y cantidad[1] que seria la cantidad
+                                    //System.out.println(cantidad[1]);
+                                    if(Integer.parseInt(cantidad[1])>0) {
+                                        MSI.AddWorker(i, Integer.parseInt(cantidad[1]));
+                                    }else {
+                                        throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                    }
+
+                                }
+                                if(MSI.getListMotherboard().getSize()+MSI.getListCPU().getSize()+MSI.getListRAM().getSize()+MSI.getListPowerSupply().getSize()+MSI.getListGraphic().getSize()+MSI.getListAssembler().getSize()>15){
+                                    throw new Exception("La cantidad de trabajadores no puede ser 0");
+                                }
+                                MSIpm.start();
+                                MSISuper.start();
+                                this.Const_ProduPlaca_MSI.setValue(MSI.getListMotherboard().getSize());
+                                this.Const_ProduCPU_MSI.setValue(MSI.getListCPU().getSize());
+                                this.Const_ProduMemoRAM_MSI.setValue(MSI.getListRAM().getSize());
+                                this.Const_ProduFuenteAlime_MSI.setValue(MSI.getListPowerSupply().getSize());
+                                this.Const_ProduTarjegGraf_MSI.setValue(MSI.getListGraphic().getSize());
+                                this.Const_Ensambladores_MSI.setValue(MSI.getListAssembler().getSize());
+
+                                System.out.println("Listo MSI");
+
+                            }
+
+                            //                for (int i = 0; i < todo.length; i++) {
+                                //                  System.out.println(todo[i]);
+                                //                }
+
+                        }
+
+                    } catch (Exception e) {
+                        JOptionPane.showMessageDialog(null, "Erorr!!!! Asegurate de haber cargado el archivo correcto");
+                        System.exit(0);
+                    }
+                }
+                // revisar despues
+                //Aquí se crea todo el tema de la gráfica
+                Global.addApple(0, 0);
+                Global.addMSI(0, 0);
+                Global.addSeries(Global.getApple());
+                Global.addSeries(Global.getMSI());
+
+                JFreeChart chart = ChartFactory.createXYLineChart("Utilidad vs Tiempo", "Utilidad (Millones $)", "Tiempo (Días)", Global.dataset, PlotOrientation.HORIZONTAL, false, true, false);
+
+                final XYPlot plot = chart.getXYPlot( );
+
+                ChartPanel barPanel = new ChartPanel(chart);
+
+                XYLineAndShapeRenderer renderer = new XYLineAndShapeRenderer( );
+                renderer.setSeriesPaint( 0 , Color.GREEN );
+                renderer.setSeriesPaint( 1 , Color.RED);
+                renderer.setSeriesStroke( 0 , new BasicStroke( 4.0f ) );
+                renderer.setSeriesStroke( 1 , new BasicStroke( 4.0f ) );
+                plot.setRenderer( renderer );
+
+                panelChart.removeAll();
+                panelChart.add(barPanel);
+                panelChart.validate();
+
+            } else {
+                JOptionPane.showMessageDialog(null, "ERROR");
+                System.exit(0);
             }
-        }else{
-            this.Cont_Day_Duration.setValue(1);
-            this.repaint();
+        } else{
+            JOptionPane.showMessageDialog(null, "La simulacion ya ha iniciado");
         }
-    }//GEN-LAST:event_Cont_Day_DurationStateChanged
+
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void saveButtonActionPerformedActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_saveButtonActionPerformedActionPerformed
+        // TODO add your handling code here:
+
+        if(iniciado == true){
+            //Apple
+            int placaApple=(int) this.Const_ProduPlaca_Apple.getValue();
+            int cpuApple=(int) this.Const_ProduCPU_Apple.getValue();
+            int ramApple=(int) this.Const_ProduMemoRAM_Apple.getValue();
+            int fuenteAlimeApple=(int) this.Const_ProduFuenteAlime_Apple.getValue();
+            int tarjeGrafApple=(int) this.Const_ProduTarjegGraf_Apple.getValue();
+            int EnsambladoresApple=(int) this.Const_Ensambladores_Apple.getValue();
+            //MSI
+            int placaMSI=(int) this.Const_ProduPlaca_MSI.getValue();
+            int cpuMSI=(int) this.Const_ProduCPU_MSI.getValue();
+            int ramMSI=(int) this.Const_ProduMemoRAM_MSI.getValue();
+            int fuenteAlimeMSI=(int) this.Const_ProduFuenteAlime_MSI.getValue();
+            int tarjeGrafMSI=(int) this.Const_ProduTarjegGraf_MSI.getValue();
+            int EnsambladoresMSI=(int) this.Const_Ensambladores_MSI.getValue();
+
+            int deadline=(int) this.Cont_Deadline.getValue();
+            int DuracionD=(int) this.Cont_Day_Duration.getValue();
+
+            String TodoTXT="Duracion\n"+DuracionD+";\nDeadline\n"+deadline+";\nApple-\nTrabajadores:\nProductoresPlaca,"+placaApple+
+            "\ncpu,"+cpuApple+"\nram,"+ramApple+"\nFuenteAlimentacion,"+fuenteAlimeApple+"\nTarjetagrafica,"+tarjeGrafApple+"\nensambladores,"+EnsambladoresApple+";\n"
+            + "MSI-\nTrabajadores:\nProductoresPlaca,"+placaMSI+
+            "\ncpu,"+cpuMSI+"\nram,"+ramMSI+"\nFuenteAlimentacion,"+fuenteAlimeMSI+"\nTarjetagrafica,"+tarjeGrafMSI+"\nensambladores,"+EnsambladoresMSI;
+
+            //            System.out.println(TodoTXT);
+
+            try {
+                if(getPath()!=null) {
+                    PrintWriter pw=new PrintWriter(getPath());
+                    pw.print(TodoTXT);
+                    pw.close();
+                    JOptionPane.showMessageDialog(null, "Guardado exitoso");
+                    System.exit(0);
+                }
+                else{JOptionPane.showMessageDialog(null, "Error!! Primero debe cargar un archivo txt");}
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, "Error!!!!!");
+                System.exit(0);
+            }
+
+        }else{
+            JOptionPane.showMessageDialog(null,"La simulación no ha empezado todavía, no se puede guardar");
+        }
+
+    }//GEN-LAST:event_saveButtonActionPerformedActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2370,6 +2383,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel59;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
+    private javax.swing.JLabel jLabel61;
+    private javax.swing.JLabel jLabel62;
+    private javax.swing.JLabel jLabel63;
+    private javax.swing.JLabel jLabel64;
+    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
