@@ -93,6 +93,10 @@ public class Interface extends javax.swing.JFrame {
         jLabel35 = new javax.swing.JLabel();
         jLabel36 = new javax.swing.JLabel();
         jLabel37 = new javax.swing.JLabel();
+        jLabel41 = new javax.swing.JLabel();
+        jLabel42 = new javax.swing.JLabel();
+        jLabel40 = new javax.swing.JLabel();
+        jLabel43 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         Const_ProduPlaca_Apple = new javax.swing.JSpinner();
         Const_ProduCPU_Apple = new javax.swing.JSpinner();
@@ -131,6 +135,7 @@ public class Interface extends javax.swing.JFrame {
         Warehouse_Apple_PC_Special = new javax.swing.JLabel();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
+        jLabel44 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         Const_ProduPlaca_MSI = new javax.swing.JSpinner();
         Const_ProduCPU_MSI = new javax.swing.JSpinner();
@@ -180,650 +185,394 @@ public class Interface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTabbedPane1.setBackground(new java.awt.Color(214, 189, 162));
+        jTabbedPane1.setBackground(new java.awt.Color(153, 204, 255));
 
-        saveButtonActionPerformed.setBackground(new java.awt.Color(132, 92, 71));
-        saveButtonActionPerformed.setForeground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        saveButtonActionPerformed.setBackground(new java.awt.Color(204, 204, 204));
+        saveButtonActionPerformed.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        saveButtonActionPerformed.setForeground(new java.awt.Color(51, 102, 255));
         saveButtonActionPerformed.setText("Guardar");
         saveButtonActionPerformed.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 saveButtonActionPerformedActionPerformed(evt);
             }
         });
+        jPanel2.add(saveButtonActionPerformed, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 410, 212, -1));
 
-        jButton3.setBackground(new java.awt.Color(132, 92, 71));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setBackground(new java.awt.Color(204, 204, 204));
+        jButton3.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(51, 102, 255));
         jButton3.setText("INICIAR");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 370, 82, -1));
 
         Cont_Deadline.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Cont_DeadlineStateChanged(evt);
             }
         });
+        jPanel2.add(Cont_Deadline, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 300, -1, -1));
 
         Cont_Day_Duration.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Cont_Day_DurationStateChanged(evt);
             }
         });
+        jPanel2.add(Cont_Day_Duration, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 300, -1, -1));
 
+        jLabel34.setFont(new java.awt.Font("AppleGothic", 0, 18)); // NOI18N
         jLabel34.setText("Deadline");
+        jPanel2.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 270, -1, -1));
 
+        jLabel35.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel35.setText("Duracion del día");
+        jPanel2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 260, -1, -1));
 
+        jLabel36.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel36.setText("milisegundos");
+        jPanel2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 310, -1, -1));
 
+        jLabel37.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel37.setText("dias");
+        jPanel2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(301, 301, 301)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel34)
-                            .addComponent(Cont_Deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(142, 142, 142)
-                        .addComponent(jLabel35))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(375, 375, 375)
-                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(312, 312, 312)
-                        .addComponent(saveButtonActionPerformed, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(377, 377, 377)
-                        .addComponent(jLabel37)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(Cont_Day_Duration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)))
-                .addComponent(jLabel36)
-                .addContainerGap(312, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(78, 78, 78)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel34)
-                    .addComponent(jLabel35))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Cont_Deadline, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Cont_Day_Duration, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel36)
-                    .addComponent(jLabel37))
-                .addGap(52, 52, 52)
-                .addComponent(jButton3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 203, Short.MAX_VALUE)
-                .addComponent(saveButtonActionPerformed)
-                .addGap(62, 62, 62))
-        );
+        jLabel41.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Deco.png"))); // NOI18N
+        jLabel41.setText("jLabel41");
+        jPanel2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 0, 450, 230));
+
+        jLabel42.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img2.png"))); // NOI18N
+        jLabel42.setText("jLabel42");
+        jPanel2.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -10, 550, 290));
+
+        jLabel40.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Sin título (968 x 549 px) (978 x 549 px) (978 x 549 px) (300 x 200 px) (978 x 549 px)-2.jpg"))); // NOI18N
+        jLabel40.setText("jLabel40");
+        jPanel2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(-440, 10, 770, 510));
+
+        jLabel43.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/blur.jpg"))); // NOI18N
+        jLabel43.setText("jLabel43");
+        jPanel2.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 110, 680, 440));
 
         jTabbedPane1.addTab("Inicio", jPanel2);
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Const_ProduPlaca_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduPlaca_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_ProduPlaca_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 184, -1, -1));
 
         Const_ProduCPU_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduCPU_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 227, -1, -1));
 
         Const_ProduMemoRAM_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduMemoRAM_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_ProduMemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 268, -1, -1));
 
         Const_ProduFuenteAlime_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduFuenteAlime_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_ProduFuenteAlime_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 318, -1, -1));
 
         Const_ProduTarjegGraf_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduTarjegGraf_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_ProduTarjegGraf_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 374, -1, -1));
 
         Const_Ensambladores_Apple.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_Ensambladores_AppleStateChanged(evt);
             }
         });
+        jPanel3.add(Const_Ensambladores_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(772, 409, -1, -1));
 
         Apple_Director_State.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         Apple_Director_State.setText("Trabajando");
+        jPanel3.add(Apple_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 250, 156, -1));
 
         Apple_Pm_State.setText("Trabajando");
+        jPanel3.add(Apple_Pm_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 290, -1, -1));
 
+        jLabel5.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel5.setText("Faltas (PM)");
+        jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, -1, -1));
 
         Apple_Fail_Counter.setText("0");
+        jPanel3.add(Apple_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 340, -1, -1));
 
+        jLabel7.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel7.setText("Sueldo descontado");
+        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 160, 25));
 
         Apple_Discount_Counter.setText("0");
+        jPanel3.add(Apple_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 380, -1, -1));
 
+        jLabel9.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel9.setText("Project Manager");
+        jPanel3.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 140, -1));
 
+        jLabel10.setFont(new java.awt.Font("AppleGothic", 3, 18)); // NOI18N
         jLabel10.setText("Director");
+        jPanel3.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 70, -1));
 
         jLabel11.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel11.setText("Deadline");
+        jPanel3.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(62, 86, -1, -1));
 
         Apple_Deadline_Counter.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         Apple_Deadline_Counter.setText("0");
+        jPanel3.add(Apple_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 86, 25, -1));
 
         jLabel13.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel13.setText("Ganancias");
+        jPanel3.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(255, 86, -1, -1));
 
         Apple_Gain_Counter.setText("0");
+        jPanel3.add(Apple_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(341, 84, 112, 18));
 
         jLabel15.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel15.setText("Gastos");
+        jPanel3.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(484, 86, -1, -1));
 
         Apple_Loss_Counter.setText("0");
+        jPanel3.add(Apple_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(596, 85, 47, -1));
 
         jLabel17.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel17.setText("Utilidad");
+        jPanel3.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(743, 86, -1, -1));
 
         Apple_Utility_Counter.setText("0");
+        jPanel3.add(Apple_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 85, -1, -1));
 
         jLabel4.setText("Productores de placa base");
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 187, -1, -1));
 
         jLabel6.setText("Productores de CPUs");
+        jPanel3.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 230, -1, -1));
 
         jLabel8.setText("Productores de Memoria RAM");
+        jPanel3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 271, -1, -1));
 
         jLabel14.setText("Productores de Fuente de alimentación");
+        jPanel3.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 321, -1, -1));
 
         jLabel16.setText("Productores de tarjetas gráficas");
+        jPanel3.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 374, -1, -1));
 
         jLabel18.setText("Ensambladores");
+        jPanel3.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(415, 409, -1, -1));
 
         Warehouse_ProduPlacabase_Apple.setText("0");
+        jPanel3.add(Warehouse_ProduPlacabase_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 187, -1, -1));
 
         Warehouse_ProduCPU_Apple.setText("0");
+        jPanel3.add(Warehouse_ProduCPU_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 230, -1, -1));
 
         Warehouse_ProdumemoRAM_Apple.setText("0");
+        jPanel3.add(Warehouse_ProdumemoRAM_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 271, -1, -1));
 
         Warehouse_FuenteAlimen_Apple.setText("0");
+        jPanel3.add(Warehouse_FuenteAlimen_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 321, -1, -1));
 
         Wrehouse_TarjeGrafi_Apple.setText("0");
+        jPanel3.add(Wrehouse_TarjeGrafi_Apple, new org.netbeans.lib.awtextra.AbsoluteConstraints(899, 377, -1, -1));
 
         Warehouse_Apple_PC_Regular.setText("0");
+        jPanel3.add(Warehouse_Apple_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(635, 488, -1, -1));
 
         Warehouse_Apple_PC_Special.setText("0");
+        jPanel3.add(Warehouse_Apple_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 488, 14, -1));
 
         jLabel27.setText("PC con Grafica");
+        jPanel3.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(865, 465, -1, -1));
 
         jLabel28.setText("PC Normal");
+        jPanel3.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(601, 465, -1, -1));
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9)
-                            .addComponent(jLabel7))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel17)
-                        .addGap(115, 115, 115))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(Apple_Pm_State)
-                                .addGroup(jPanel3Layout.createSequentialGroup()
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addComponent(jLabel11)
-                                        .addComponent(jLabel10))
-                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                        .addGroup(jPanel3Layout.createSequentialGroup()
-                                            .addComponent(Apple_Deadline_Counter, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGap(70, 70, 70)
-                                            .addComponent(jLabel13))
-                                        .addComponent(Apple_Director_State, javax.swing.GroupLayout.PREFERRED_SIZE, 156, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addComponent(jLabel5)
-                                .addGap(155, 155, 155)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Apple_Discount_Counter)
-                                    .addComponent(Apple_Fail_Counter))))
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(99, 99, 99)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel8)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel18)
-                                    .addGroup(jPanel3Layout.createSequentialGroup()
-                                        .addComponent(jLabel16)
-                                        .addGap(34, 34, 34)
-                                        .addComponent(Warehouse_Apple_PC_Regular)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 126, Short.MAX_VALUE)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(63, 63, 63))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addComponent(Apple_Gain_Counter, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(31, 31, 31)
-                                .addComponent(jLabel15)
-                                .addGap(71, 71, 71)
-                                .addComponent(Apple_Loss_Counter, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(Warehouse_ProduPlacabase_Apple)
-                    .addComponent(Apple_Utility_Counter)
-                    .addComponent(Warehouse_ProduCPU_Apple)
-                    .addComponent(Warehouse_ProdumemoRAM_Apple)
-                    .addComponent(Warehouse_FuenteAlimen_Apple)
-                    .addComponent(Wrehouse_TarjeGrafi_Apple)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(Warehouse_Apple_PC_Special, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(76, 76, 76))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel28)
-                .addGap(202, 202, 202)
-                .addComponent(jLabel27)
-                .addGap(46, 46, 46))
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addGap(84, 84, 84)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel11)
-                    .addComponent(Apple_Deadline_Counter)
-                    .addComponent(jLabel13)
-                    .addComponent(Apple_Gain_Counter, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15)
-                    .addComponent(Apple_Loss_Counter)
-                    .addComponent(jLabel17)
-                    .addComponent(Apple_Utility_Counter))
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(124, 124, 124)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Const_ProduCPU_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel6)
-                            .addComponent(Warehouse_ProduCPU_Apple)))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(Const_ProduPlaca_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Warehouse_ProduPlacabase_Apple))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(Apple_Director_State))))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel9)
-                        .addComponent(Apple_Pm_State))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Const_ProduMemoRAM_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel8)
-                        .addComponent(Warehouse_ProdumemoRAM_Apple)))
-                .addGap(27, 27, 27)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Const_ProduFuenteAlime_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)
-                    .addComponent(Warehouse_FuenteAlimen_Apple))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(Apple_Fail_Counter))
-                .addGap(10, 10, 10)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel16)
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(4, 4, 4)
-                                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Apple_Discount_Counter)))
-                            .addGroup(jPanel3Layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel18))))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(Const_ProduTarjegGraf_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(Wrehouse_TarjeGrafi_Apple))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Const_Ensambladores_Apple, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel28))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Warehouse_Apple_PC_Regular)
-                    .addComponent(Warehouse_Apple_PC_Special))
-                .addContainerGap(18, Short.MAX_VALUE))
-        );
+        jLabel44.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/img3.jpg"))); // NOI18N
+        jLabel44.setText("jLabel44");
+        jPanel3.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(-260, 90, 730, 460));
 
         jTabbedPane1.addTab("Apple", jPanel3);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Const_ProduPlaca_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduPlaca_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_ProduPlaca_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 208, -1, -1));
 
         Const_ProduCPU_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduCPU_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 249, -1, -1));
 
         Const_ProduMemoRAM_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduMemoRAM_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_ProduMemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 290, -1, -1));
 
         Const_ProduFuenteAlime_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduFuenteAlime_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_ProduFuenteAlime_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 331, -1, -1));
 
         Const_ProduTarjegGraf_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_ProduTarjegGraf_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_ProduTarjegGraf_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 372, -1, -1));
 
         Const_Ensambladores_MSI.addChangeListener(new javax.swing.event.ChangeListener() {
             public void stateChanged(javax.swing.event.ChangeEvent evt) {
                 Const_Ensambladores_MSIStateChanged(evt);
             }
         });
+        jPanel4.add(Const_Ensambladores_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(766, 413, -1, -1));
 
         jLabel12.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel12.setText("Deadline");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 86, -1, -1));
 
         MSI_Deadline_Counter.setText("0");
+        jPanel4.add(MSI_Deadline_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(124, 85, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel20.setText("Ganancias");
+        jPanel4.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 86, -1, -1));
 
         MSI_Gain_Counter.setText("0");
+        jPanel4.add(MSI_Gain_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(348, 85, -1, -1));
 
         jLabel22.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel22.setText("Gastos");
+        jPanel4.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(444, 86, -1, -1));
 
         MSI_Loss_Counter.setText("0");
+        jPanel4.add(MSI_Loss_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(568, 85, 67, -1));
 
         jLabel24.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel24.setText("Utilidad");
+        jPanel4.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(684, 86, -1, -1));
 
         MSI_Utility_Counter.setText("0");
+        jPanel4.add(MSI_Utility_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(937, 85, -1, -1));
 
         jLabel19.setText("Director");
+        jPanel4.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 201, -1, -1));
 
         jLabel26.setText("Project Manager");
+        jPanel4.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 258, -1, -1));
 
         MSI_Director_State.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         MSI_Director_State.setText("Trabajando");
+        jPanel4.add(MSI_Director_State, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 201, 157, -1));
 
         MSI_pm_state.setText("Trabajando");
+        jPanel4.add(MSI_pm_state, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 258, -1, -1));
 
         jLabel29.setText("Faltas (PM)");
+        jPanel4.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 316, -1, -1));
 
         MSI_Fail_Counter.setText("0");
+        jPanel4.add(MSI_Fail_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 316, -1, -1));
 
         jLabel31.setText("Sueldo descontado");
+        jPanel4.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 371, -1, -1));
 
         MSI_Discount_Counter.setText("0");
+        jPanel4.add(MSI_Discount_Counter, new org.netbeans.lib.awtextra.AbsoluteConstraints(315, 371, -1, -1));
 
         jLabel21.setText("Productores de placa base");
+        jPanel4.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 211, -1, -1));
 
         jLabel23.setText("Productores de CPUs");
+        jPanel4.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 252, -1, -1));
 
         jLabel25.setText("Productores de Memoria RAM");
+        jPanel4.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 293, -1, -1));
 
         jLabel30.setText("Productores de Fuente de alimentación");
+        jPanel4.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 334, -1, -1));
 
         jLabel32.setText("Productores de tarjetas gráficas");
+        jPanel4.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 375, -1, -1));
 
         jLabel33.setText("Ensambladores");
+        jPanel4.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 416, -1, -1));
 
         Warehouse_ProduPlacabase_MSI.setText("0");
+        jPanel4.add(Warehouse_ProduPlacabase_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 211, -1, -1));
 
         Warehouse_ProduCPU_MSI.setText("0");
+        jPanel4.add(Warehouse_ProduCPU_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 252, -1, -1));
 
         Warehouse_ProdumemoRAM_MSI.setText("0");
+        jPanel4.add(Warehouse_ProdumemoRAM_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 293, -1, -1));
 
         Warehouse_FuenteAlimen_MSI.setText("0");
+        jPanel4.add(Warehouse_FuenteAlimen_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 334, -1, -1));
 
         Wrehouse_TarjeGrafi_MSI.setText("0");
+        jPanel4.add(Wrehouse_TarjeGrafi_MSI, new org.netbeans.lib.awtextra.AbsoluteConstraints(896, 375, -1, -1));
 
         Warehouse_MSI_PC_Regular.setText("0");
+        jPanel4.add(Warehouse_MSI_PC_Regular, new org.netbeans.lib.awtextra.AbsoluteConstraints(663, 482, -1, -1));
 
         Warehouse_MSI_PC_Special.setText("0");
+        jPanel4.add(Warehouse_MSI_PC_Special, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 478, 23, 25));
 
         jLabel38.setText("PC Normal");
+        jPanel4.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(627, 455, -1, -1));
 
         jLabel39.setText("PC con Grafica");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(33, 33, 33)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(MSI_pm_state)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel12)
-                                .addGap(43, 43, 43)
-                                .addComponent(MSI_Deadline_Counter)
-                                .addGap(67, 67, 67)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel20)
-                                        .addGap(90, 90, 90)
-                                        .addComponent(MSI_Gain_Counter))
-                                    .addComponent(MSI_Director_State, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(95, 95, 95)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel26)
-                            .addComponent(jLabel19)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel29)
-                                    .addComponent(jLabel31))
-                                .addGap(107, 107, 107)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(MSI_Discount_Counter)
-                                    .addComponent(MSI_Fail_Counter))))))
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabel38)
-                                .addGap(167, 167, 167)
-                                .addComponent(jLabel39))
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(89, 89, 89)
-                                .addComponent(jLabel22)
-                                .addGap(83, 83, 83)
-                                .addComponent(MSI_Loss_Counter, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(49, 49, 49)
-                                .addComponent(jLabel24)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(MSI_Utility_Counter)))
-                        .addGap(55, 55, 55))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(100, 100, 100)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel33)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel32)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel25)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel21)
-                                            .addComponent(jLabel30))
-                                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                                .addGap(83, 83, 83)
-                                                .addComponent(Const_ProduPlaca_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                                .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel4Layout.createSequentialGroup()
-                                        .addComponent(jLabel23)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Const_ProduCPU_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(66, 66, 66))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(Warehouse_MSI_PC_Regular)
-                                .addGap(226, 226, 226)))
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(Warehouse_ProduPlacabase_MSI)
-                                    .addComponent(Warehouse_ProduCPU_MSI)
-                                    .addComponent(Warehouse_ProdumemoRAM_MSI)
-                                    .addComponent(Warehouse_FuenteAlimen_MSI)
-                                    .addComponent(Wrehouse_TarjeGrafi_MSI))
-                                .addGap(0, 96, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addComponent(Warehouse_MSI_PC_Special, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(76, 76, 76))))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(201, 201, 201)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel19)
-                    .addComponent(MSI_Director_State))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 36, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel26)
-                    .addComponent(MSI_pm_state))
-                .addGap(41, 41, 41)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel29)
-                    .addComponent(MSI_Fail_Counter))
-                .addGap(38, 38, 38)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel31)
-                    .addComponent(MSI_Discount_Counter))
-                .addContainerGap(130, Short.MAX_VALUE))
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(85, 85, 85)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel12)
-                    .addComponent(MSI_Deadline_Counter)
-                    .addComponent(jLabel20)
-                    .addComponent(MSI_Gain_Counter)
-                    .addComponent(jLabel22)
-                    .addComponent(MSI_Loss_Counter)
-                    .addComponent(jLabel24)
-                    .addComponent(MSI_Utility_Counter))
-                .addGap(105, 105, 105)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel21)
-                    .addComponent(Const_ProduPlaca_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Warehouse_ProduPlacabase_MSI))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel23)
-                    .addComponent(Const_ProduCPU_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Warehouse_ProduCPU_MSI))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel25)
-                    .addComponent(Const_ProduMemoRAM_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Warehouse_ProdumemoRAM_MSI))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel30)
-                    .addComponent(Const_ProduFuenteAlime_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Warehouse_FuenteAlimen_MSI))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel32)
-                    .addComponent(Const_ProduTarjegGraf_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(Wrehouse_TarjeGrafi_MSI))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel33)
-                    .addComponent(Const_Ensambladores_MSI, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 19, Short.MAX_VALUE)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Warehouse_MSI_PC_Regular)
-                    .addComponent(Warehouse_MSI_PC_Special, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18))
-        );
+        jPanel4.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(856, 455, -1, -1));
 
         jTabbedPane1.addTab("MSI", jPanel4);
 
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel1.setFont(new java.awt.Font("AppleGothic", 1, 36)); // NOI18N
         jLabel1.setText("Gráfico");
+        jPanel5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(365, 40, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel2.setText("MSI");
+        jPanel5.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 40, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("AppleGothic", 0, 13)); // NOI18N
         jLabel3.setText("Apple");
+        jPanel5.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(859, 69, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(255, 0, 0));
 
@@ -838,18 +587,11 @@ public class Interface extends javax.swing.JFrame {
             .addGap(0, 22, Short.MAX_VALUE)
         );
 
-        jPanel7.setBackground(new java.awt.Color(115, 185, 123));
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 35, -1, -1));
 
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 22, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 22, Short.MAX_VALUE)
-        );
+        jPanel7.setBackground(new java.awt.Color(115, 185, 123));
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel5.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(909, 69, -1, -1));
 
         javax.swing.GroupLayout panelChartLayout = new javax.swing.GroupLayout(panelChart);
         panelChart.setLayout(panelChartLayout);
@@ -859,53 +601,10 @@ public class Interface extends javax.swing.JFrame {
         );
         panelChartLayout.setVerticalGroup(
             panelChartLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 380, Short.MAX_VALUE)
+            .addGap(0, 387, Short.MAX_VALUE)
         );
 
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addGap(365, 365, 365)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 376, Short.MAX_VALUE)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(18, 18, 18)
-                        .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(37, 37, 37))
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGap(44, 44, 44)
-                .addComponent(panelChart, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addGap(35, 35, 35)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel3)
-                            .addComponent(jPanel7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(22, 22, 22)
-                .addComponent(panelChart, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(21, 21, 21))
-        );
-
+        jPanel5.add(panelChart, new org.netbeans.lib.awtextra.AbsoluteConstraints(44, 113, -1, -1));
         panelChart.setBackground(new java.awt.Color(204, 204, 204));
 
         panelChart.setForeground(new java.awt.Color(255, 255, 255));
@@ -914,16 +613,7 @@ public class Interface extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Gráfico", jPanel5);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
-        );
+        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1095,7 +785,7 @@ public class Interface extends javax.swing.JFrame {
                          }
                          
                      }
-                    if(Apple.getListMotherboard().getSize()+Apple.getListCPU().getSize()+Apple.getListRAM().getSize()+Apple.getListPowerSupply().getSize()+Apple.getListGraphic().getSize()+Apple.getListAssembler().getSize()>12){
+                    if(Apple.getListMotherboard().getSize()+Apple.getListCPU().getSize()+Apple.getListRAM().getSize()+Apple.getListPowerSupply().getSize()+Apple.getListGraphic().getSize()+Apple.getListAssembler().getSize()>13){
                         throw new Exception("La cantidad de trabajadores no puede ser 0");
                     }
                     Applepm.start();
@@ -1187,7 +877,7 @@ public class Interface extends javax.swing.JFrame {
                          }
                          
                      }
-                    if(MSI.getListMotherboard().getSize()+MSI.getListCPU().getSize()+MSI.getListRAM().getSize()+MSI.getListPowerSupply().getSize()+MSI.getListGraphic().getSize()+MSI.getListAssembler().getSize()>13){
+                    if(MSI.getListMotherboard().getSize()+MSI.getListCPU().getSize()+MSI.getListRAM().getSize()+MSI.getListPowerSupply().getSize()+MSI.getListGraphic().getSize()+MSI.getListAssembler().getSize()>15){
                         throw new Exception("La cantidad de trabajadores no puede ser 0");
                     }
                     MSIpm.start();
@@ -2545,6 +2235,11 @@ public class Interface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
+    private javax.swing.JLabel jLabel41;
+    private javax.swing.JLabel jLabel42;
+    private javax.swing.JLabel jLabel43;
+    private javax.swing.JLabel jLabel44;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;

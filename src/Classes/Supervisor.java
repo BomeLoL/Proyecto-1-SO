@@ -123,7 +123,7 @@ public class Supervisor extends Thread {
             Interface.getApple_Discount_Counter().setText(Integer.toString(this.getPm().getMoneyDeducted()) +"$");
         }else{
             Interface.getMSI_Fail_Counter().setText(Integer.toString(this.getPm().getFaults()));
-            Interface.getMSI_Fail_Counter().setText(Integer.toString(this.getPm().getFaults()));
+            Interface.getMSI_Discount_Counter().setText(Integer.toString(this.getPm().getMoneyDeducted()) +"$");
         }     
     }
     
