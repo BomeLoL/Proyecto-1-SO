@@ -5,6 +5,7 @@
 package Classes;
 
 import Interfaces.Global;
+import Interfaces.Interface;
 
 /**
  *
@@ -36,22 +37,58 @@ public class Warehouse {
         if (type == 0){
             if(this.motherboard<25){
                 this.motherboard+=1;
+                if (this.company.equals("Apple")){
+                    Interface.getWarehouse_ProduPlacabase_Apple().setText(Integer.toString(motherboard));
+                }else{
+                    Interface.getWarehouse_ProduPlacabase_MSI().setText(Integer.toString(motherboard));
+                }
+            }
+            else {System.out.println("Drive lleno!! PLACA BASE");        
             }
         } else if (type == 1){
             if(this.cpu<20){
                 this.cpu+=1;
+                if (this.company.equals("Apple")){
+                    Interface.getWarehouse_ProduCPU_Apple().setText(Integer.toString(cpu));
+                }else{ 
+                    Interface.getWarehouse_ProduCPU_MSI().setText(Integer.toString(cpu));
+                }
             }
+            else {System.out.println("Drive lleno!! CPU");        
+            }
+        
         } else if (type == 2){
             if(this.ram<55){
                 this.ram+=1;
+                if (this.company.equals("Apple")){
+                    Interface.getWarehouse_ProdumemoRAM_Apple().setText(Integer.toString(ram));
+                }else{ 
+                    Interface.getWarehouse_ProdumemoRAM_MSI().setText(Integer.toString(ram));
+                }
+            }
+            else {System.out.println("Drive lleno!! RAM");        
             }
         } else if (type == 3){
             if(this.powerSupply<35){
                 this.powerSupply+=1;
+              if (this.company.equals("Apple")){
+                    Interface.getWarehouse_FuenteAlimen_Apple().setText(Integer.toString(powerSupply));
+                }else{ 
+                    Interface.getWarehouse_FuenteAlimen_MSI().setText(Integer.toString(powerSupply));
+                }
+            }
+            else {System.out.println("Drive lleno!! BATERIA");        
             }
         } else if (type == 4){
             if(this.graphicCard<10){
                 this.graphicCard+=1;
+              if (this.company.equals("Apple")){
+                    Interface.getWrehouse_TarjeGrafi_Apple().setText(Integer.toString(graphicCard));
+                }else{ 
+                    Interface.getWrehouse_TarjeGrafi_MSI().setText(Integer.toString(graphicCard));
+                }
+            }
+            else {System.out.println("Drive lleno!! GRAFICA");        
             }
         }
     }
@@ -65,12 +102,19 @@ public class Warehouse {
             if (pcUntilSpecial!=0) {
                 pcRegular+=1;
                 pcUntilSpecial-=1;
+                Interface.getWarehouse_Apple_PC_Regular().setText(Integer.toString(pcRegular));
             }
             else{
                 graphicCard-=2;
                 pcSpecial+=1;
                 pcUntilSpecial=5;
+                Interface.getWarehouse_Apple_PC_Special().setText(Integer.toString(pcSpecial));
             }
+            Interface.getWarehouse_FuenteAlimen_Apple().setText(Integer.toString(powerSupply));
+            Interface.getWarehouse_ProduCPU_Apple().setText(Integer.toString(cpu));
+            Interface.getWarehouse_ProduPlacabase_Apple().setText(Integer.toString(motherboard));
+            Interface.getWarehouse_ProdumemoRAM_Apple().setText(Integer.toString(ram));
+            Interface.getWrehouse_TarjeGrafi_Apple().setText(Integer.toString(graphicCard));
         }
         else{
             motherboard-=2;
@@ -80,40 +124,57 @@ public class Warehouse {
             if (pcUntilSpecial!=0){
                 pcRegular+=1;
                 pcUntilSpecial-=1;
+                Interface.getWarehouse_MSI_PC_Regular().setText(Integer.toString(pcRegular));
             }
             else{
                 graphicCard-=5;
                 pcSpecial+=1;
                 pcUntilSpecial=6;
+                Interface.getWarehouse_MSI_PC_Special().setText(Integer.toString(pcSpecial));
             }
+            Interface.getWarehouse_FuenteAlimen_MSI().setText(Integer.toString(powerSupply));
+            Interface.getWarehouse_ProduCPU_MSI().setText(Integer.toString(cpu));
+            Interface.getWarehouse_ProduPlacabase_MSI().setText(Integer.toString(motherboard));
+            Interface.getWarehouse_ProdumemoRAM_MSI().setText(Integer.toString(ram));
+            Interface.getWrehouse_TarjeGrafi_MSI().setText(Integer.toString(graphicCard));
         }
         //System.out.println("especial "+this.pcSpecial);  
-        //System.out.println("regular "+this.pcRegular);        
+        //System.out.println("regular "+this.pcRegular);   
+
 
     }
     
     public void calculateProfitRegular(float profit){
         if (this.company.equals("Apple")){
-            setIncome(getIncome() + income*100000);
+            setIncome(getIncome() + 100000);
             setUtility(getIncome()- getCosts());
+            Interface.getApple_Gain_Counter().setText(Integer.toString((int) getIncome())+"$");
+            Interface.getApple_Utility_Counter().setText(Integer.toString((int) ((int) getIncome() - getCosts()))+"$");
             Global.addApple((int) getUtility(), (Global.getDaycounter()-1)/2);
 
         }
         else{
-            setIncome(getIncome()+income*180000);
+            setIncome(getIncome()+180000);
             setUtility(getIncome()- getCosts());
+            Interface.getMSI_Gain_Counter().setText(Integer.toString((int) getIncome())+"$");
+            Interface.getMSI_Utility_Counter().setText(Integer.toString((int) ((int) getIncome() - getCosts()))+"$");
             Global.addMSI((int) getUtility(), (Global.getDaycounter()-1)/2);
+
         }
     }
     
     public void calculateProfitSpecial(float profit){
         if (this.company.equals("Apple")){
-            setIncome(getIncome() + income*150000);
+            setIncome(getIncome() + 150000);
             setUtility(getIncome()- getCosts());
+            Interface.getApple_Gain_Counter().setText(Integer.toString((int) getIncome())+"$");
+            Interface.getApple_Utility_Counter().setText(Integer.toString((int) ((int) getIncome() - getCosts()))+"$");
         }
         else{
-            setIncome(getIncome()+income*250000);
+            setIncome(getIncome()+250000);
             setUtility(getIncome()- getCosts());
+            Interface.getMSI_Utility_Counter().setText(Integer.toString((int) ((int) getIncome() - getCosts()))+"$");
+            Global.addMSI((int) getUtility(), (Global.getDaycounter()-1)/2);
         }
     }
 

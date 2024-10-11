@@ -6,6 +6,7 @@
 package Classes;
 
 import Interfaces.Global;
+import Interfaces.Interface;
 import static java.lang.Thread.sleep;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
@@ -42,8 +43,10 @@ public class ProjectManager extends Thread {
             for (int i=1; i<=16; i++){
                 try{
                     this.status="Trabajando";
+                      changeStateText();
                     sleep(this.hours/2); //espera media hora
                     this.status="Viendo anime";
+                      changeStateText();
                     sleep(this.hours/2);
                 } catch (InterruptedException ex){
                     System.out.println("error en el project manager 1");
@@ -56,6 +59,8 @@ public class ProjectManager extends Thread {
             this.mutex.acquire();
             if(this.warehouse.getDeadlineCounter()>0){
                 this.warehouse.setDeadlineCounter(this.warehouse.getDeadlineCounter()-1);
+                Interface.getApple_Deadline_Counter().setText(Integer.toString(this.warehouse.getDeadlineCounter()));
+                Interface.getMSI_Deadline_Counter().setText(Integer.toString(this.warehouse.getDeadlineCounter()));
             }
             Global.setDaycounter(Global.getDaycounter()+1);
             this.warehouse.setCosts(this.warehouse.getCosts()+this.salaryPerHour*24);
@@ -68,6 +73,15 @@ public class ProjectManager extends Thread {
         
     }
 
+    public void changeStateText(){
+        if(this.warehouse.getCompany().equals("Apple")){
+            Interface.getApple_Pm_State().setText(this.status);
+        }else{
+            Interface.getMSI_pm_state().setText(this.status);
+        }        
+    }
+    
+    
     public int getSalaryPerHour() {
         return salaryPerHour;
     }

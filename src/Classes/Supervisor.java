@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import Interfaces.Interface;
 import static java.lang.Thread.sleep;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
@@ -41,6 +42,7 @@ public class Supervisor extends Thread {
             if (this.warehouse.getDeadlineCounter() <=0){
                 try{
                     this.currentActivity = "Enviando Computadoras";
+                    changeStateText();
                     sleep(this.dayDuration);
                     this.mutex.acquire();
                     this.warehouse.setDeadlineCounter(this.warehouse.getDeadline());
@@ -50,10 +52,14 @@ public class Supervisor extends Thread {
                         if(this.warehouse.getPcRegular()>0){
                             this.warehouse.calculateProfitRegular(this.warehouse.getPcRegular());
                             this.warehouse.setPcRegular(0);
+                            Interface.getWarehouse_Apple_PC_Regular().setText(Integer.toString(this.warehouse.getPcRegular()));
+                            Interface.getWarehouse_MSI_PC_Regular().setText(Integer.toString(this.warehouse.getPcRegular()));
                         }
                         if(this.warehouse.getPcSpecial()>0){
                             this.warehouse.calculateProfitSpecial(this.warehouse.getPcSpecial());
                             this.warehouse.setPcSpecial(0);
+                            Interface.getWarehouse_Apple_PC_Special().setText(Integer.toString(this.warehouse.getPcSpecial()));
+                            Interface.getWarehouse_MSI_PC_Special().setText(Integer.toString(this.warehouse.getPcSpecial()));
                         }
                     }
                     this.mutex.release();
@@ -71,6 +77,7 @@ public class Supervisor extends Thread {
                         this.currentActivity = "Trabajando";
                         if(i==this.randomTime){
                             this.currentActivity="Revisando al PM";
+                            changeStateText();
                             if(this.randomTime <= 16){
                                 System.out.println("LO ATRAPE SI O SI");
                             }
@@ -110,12 +117,31 @@ public class Supervisor extends Thread {
             
     }
     
+    public void changeFailText(){
+        if(this.warehouse.getCompany().equals("Apple")){
+            Interface.getApple_Fail_Counter().setText(Integer.toString(this.getPm().getFaults()));
+            Interface.getApple_Discount_Counter().setText(Integer.toString(this.getPm().getMoneyDeducted()) +"$");
+        }else{
+            Interface.getMSI_Fail_Counter().setText(Integer.toString(this.getPm().getFaults()));
+            Interface.getMSI_Fail_Counter().setText(Integer.toString(this.getPm().getFaults()));
+        }     
+    }
+    
+    public void changeStateText(){
+        if(this.warehouse.getCompany().equals("Apple")){
+            Interface.getApple_Director_State().setText(this.currentActivity);
+        }else{
+            Interface.getMSI_Director_State().setText(this.currentActivity);
+        }        
+    }      
+
     
     public boolean checkPM(){
         if(this.getPm().getStatus().equals("Viendo anime")){
                 this.getPm().setFaults(this.getPm().getFaults() + 1);
                 this.getPm().setMoneyDeducted(this.getPm().getMoneyDeducted()+ 100);
                 this.getPm().setSalaryTotal(this.getPm().getSalaryTotal()- 100);
+                changeFailText();
                 return true;
         } else{
             return false;

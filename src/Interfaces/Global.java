@@ -46,6 +46,10 @@ public class Global {
     public static XYSeriesCollection getDataset() {
         return dataset;
     }
+    
+    public static void addSeries(XYSeries serie){
+        getDataset().addSeries(serie);
+    }
        
     public static void addApple(int num1, int num2){
         getApple().add(num1, num2);

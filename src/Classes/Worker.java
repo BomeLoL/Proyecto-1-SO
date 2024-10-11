@@ -4,6 +4,7 @@
  */
 package Classes;
 
+import Interfaces.Interface;
 import static java.lang.Thread.sleep;
 import java.util.concurrent.Semaphore;
 
@@ -108,6 +109,11 @@ public class Worker extends Thread {
         try{
             this.mutex.acquire(); // se expropia para añadir el costo en el almacen
             this.warehouse.setCosts(this.warehouse.getCosts()+this.salaryPerHour*24);
+        if (this.company.equals("Apple")){
+            Interface.getApple_Loss_Counter().setText(Integer.toString((int) this.warehouse.getCosts())+"$");
+            }else{
+            Interface.getMSI_Loss_Counter().setText(Integer.toString((int) this.warehouse.getCosts())+"$");
+            } 
             this.mutex.release();
             this.salaryTotal+=this.salaryPerHour*24;
         }catch(InterruptedException ex) {
